@@ -4,37 +4,35 @@ body {
   background-color: #000000;
   background-repeat:no-repeat;
   background-size: 1920px 1080px;
-
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
-}
-
-#header {
-  text-align: center;
-
-  font-size: 30px;
-  color: #ffffff;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 #navbar > ul {
     list-style-type: none;
-    margin: 50px;
+    margin: 0;
+    border: 1px solid #ffffff;
     padding: 0;
     overflow: hidden;
-
     background-color: #ff9933;
 }
 #navbar > ul li {
     float: left;
-    border-right: 1px solid #000066;
+    border-right: 2px solid #ffffff;
 }
 #navbar > ul li a {
     text-align: center;
-    display: block;
     text-decoration: none;
-
+    display: block;
     color: #000066;
     padding: 16px 16px;
 }
 #navbar > ul li a:hover {
     background-color: #ffff99;
+}
+
+#desc {
+  text-align: center;
+  margin-top: 50px;
+  border: 1px solid #ff9933;
+  color: #ffffff;
 }
