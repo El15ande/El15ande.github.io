@@ -4,10 +4,10 @@ body {
   background-color: #000000;
   background-repeat:no-repeat;
   background-size: 1920px 1080px;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
-#navbar > ul {
+#navbar ul {
     list-style-type: none;
     margin: 0;
     border: 1px solid #ffffff;
@@ -15,11 +15,11 @@ body {
     overflow: hidden;
     background-color: #ff9933;
 }
-#navbar > ul li {
+#navbar li {
     float: left;
     border-right: 2px solid #ffffff;
 }
-#navbar > ul li a {
+#navbar ul li a {
     text-align: center;
     text-decoration: none;
     display: block;
@@ -31,6 +31,7 @@ body {
 }
 
 #desc {
+  position: relative;
   text-align: center;
   margin-top: 50px;
   border: 1px solid #ff9933;
