@@ -1,0 +1,52 @@
+body {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  background-color: #668cff;
+  color: #ffffff;
+}
+
+.cv {
+  margin: 10px;
+  padding: 0;
+}
+.cv h1 {
+  font-size: 40px;
+}
+.cv h3 {
+  font-size: 20px;
+  margin-left: 30px;
+}
+.cv ul {
+  font-size: 18px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  display: none;
+}
+.cv ol {
+  font-size: 17px;
+  margin-left: 20px;
+}
+
+
+.title {
+  text-align: left;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 50%;
+}
+
+#viewAll {
+  float: left;
+}
+
+#header {
+  text-align: right;
+  font-weight: bold;
+}
+
+.further {
+
+}
