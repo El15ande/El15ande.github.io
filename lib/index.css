@@ -2,7 +2,7 @@ body {
   background-image: url(../lib/background.jpg);
 
   background-color: #000000;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: 1920px 1080px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
@@ -17,7 +17,7 @@ body {
 }
 #navbar li {
     float: left;
-    border-right: 2px solid #ffffff;
+    border-right: 2px solid ;
 }
 #navbar ul li a {
     text-align: center;
@@ -30,10 +30,22 @@ body {
     background-color: #ffff99;
 }
 
-#desc {
+.module,.submodule {
   position: relative;
   text-align: center;
-  margin-top: 50px;
   border: 1px solid #ff9933;
+  border-radius: 10px;
   color: #ffffff;
+}
+.module {
+  margin-top: 50px;
+}
+.submodule {
+  margin-top: 20px;
+  background-color: #960018;
+  width: 25%;
+  display: inline-block;
+}
+.submodule:hover {
+  background-color: #ff9933;
 }
