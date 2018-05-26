@@ -1,29 +1,38 @@
 body {
   background-image: url(../lib/background.jpg);
 
+  margin: 0;
+
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: 1920px 1080px;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #0000ff;
+}
+
 #navbar ul {
     list-style-type: none;
     margin: 0;
-    border: 1px solid #ffffff;
+    border: 1px solid #000000;
     padding: 0;
     overflow: hidden;
     background-color: #ff9933;
 }
 #navbar li {
     float: left;
-    border-right: 2px solid ;
+    border-right: 3px solid ;
 }
 #navbar ul li a {
     text-align: center;
     text-decoration: none;
     display: block;
-    color: #000066;
+    color: #070B50;
     padding: 16px 16px;
 }
 #navbar > ul li a:hover {
@@ -38,12 +47,13 @@ body {
   color: #ffffff;
 }
 .module {
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .submodule {
-  margin-top: 20px;
-  background-color: #960018;
-  width: 25%;
+  margin: 10px;
+  background-color: #070B50;
+  width: 23.5%;
   display: inline-block;
 }
 .submodule:hover {
