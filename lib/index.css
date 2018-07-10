@@ -1,12 +1,20 @@
 body {
   background-image: url(../lib/background.jpg);
-
-  margin: 0;
-
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: 1920px 1080px;
+
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+#desc {
+  display: inline-block;
+  width: 25%;
+}
+#project {
+  display: inline-block;
+  float: right;
+  width: 74.5%;
 }
 
 a {
@@ -17,29 +25,29 @@ a:hover {
 }
 
 #navbar ul {
-    list-style-type: none;
-    margin: 0;
-    border: 1px solid #000000;
-    padding: 0;
-    overflow: hidden;
-    background-color: #ff9933;
+  list-style-type: none;
+  margin: 0;
+  border: 1px solid #000000;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ff9933;
 }
 #navbar li {
-    float: left;
-    border-right: 3px solid ;
+  float: left;
+  border-right: 3px solid ;
 }
 #navbar ul li a {
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    color: #070B50;
-    padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  color: #070B50;
+  padding: 16px 16px;
 }
 #navbar > ul li a:hover {
-    background-color: #ffff99;
+  background-color: #ffff99;
 }
 
-.module,.submodule {
+.module,.submoduleA {
   position: relative;
   text-align: center;
   border: 1px solid #ff9933;
@@ -50,12 +58,13 @@ a:hover {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-.submodule {
-  margin: 10px;
+.submoduleA {
+  margin: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-color: #070B50;
-  width: 23.5%;
   display: inline-block;
 }
-.submodule:hover {
+.submoduleA:hover {
   background-color: #ff9933;
 }
