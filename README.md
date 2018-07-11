@@ -1,5 +1,4 @@
 # El15ande.github.io
 
 ## Description
-
-## Structure
+This is my personal Github page.
