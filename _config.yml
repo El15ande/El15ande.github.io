@@ -1,5 +1,6 @@
 title: El15ande's GithubPage
 github_username: El15ande
+baseurl: '/index'
 
 markdown: kramdown
 theme: minima
