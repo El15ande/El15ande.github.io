@@ -3,4 +3,4 @@ github_username: El15ande
 baseurl: '/index'
 
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-cayman
