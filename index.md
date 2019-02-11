@@ -2,6 +2,7 @@
 layout: home
 ---
 
+## Hello!
 I am a junior student in [University of St Andrews](https://st-andrews.ac.uk), this is my GithubPage (served by GithubPage & Jekyll).  
 Click links to view my CV, past projects & blogs.
 ### Page construction stage: jekyll configuration
@@ -9,7 +10,7 @@ Click links to view my CV, past projects & blogs.
 <br>
 <hr>
 
-# Projects
+## Projects
 ### [My GithubPage](https://github.com/El15ande/El15ande.github.io)
 <br>
 <hr>
