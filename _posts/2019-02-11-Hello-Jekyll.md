@@ -37,7 +37,7 @@ __El15ande, St Andrews__
 
 ### [GithubPage](https://pages.github.com/): 薅Github的羊毛
 GithubPage注册中文教程 (来源CSDN): [链接](https://blog.csdn.net/baidu_25464429/article/details/80805237)  
-Git命令行CheatSheet (来源Github): [链接]((https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf))  
+Git命令行CheatSheet (来源Github): [链接](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)  
 GithubPage最大的优势就是免费且安全, 但同时也要求使用者有基本的Git相关知识. 我个人推荐使用[Github Desktop](https://desktop.github.com/)或者[Atom-Github package](https://github.atom.io/), 这些Apps有简洁的GUI, 不需要记住冗长的命令也可以自由的操纵Git.  
 新手可能会遇到的另一个问题是分支 (branching), 个人推荐除非OCD晚期, 否则`master`足够Jekyll使用.
 
