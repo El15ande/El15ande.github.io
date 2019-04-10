@@ -12,16 +12,16 @@ Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.
 
 Question | Answer
 ---|---
-What is software? | ++Computer programs & associated documentation++ for a particular customer or a general market
-What are the attributes of good software? | ++Deliver the required functionality & performance++ to the user & ++be maintainable, dependable & usable++
-What is SE? | An engineering discipline ++concerned with all aspects of software production++ from initial conception to operation & maintenance
+What is software? | __Computer programs & associated documentation__ for a particular customer or a general market
+What are the attributes of good software? | __Deliver the required functionality & performance__ to the user & __be maintainable, dependable & usable__
+What is SE? | An engineering discipline __concerned with all aspects of software production__ from initial conception to operation & maintenance
 What are the fundamental SE activities? | Software specification, development, validation & evolution
-What is the difference between SE & CS? | CS focuses on theory & fundamentals, while SE is concerned with ++practicalities of developing & delivering good software++
+What is the difference between SE & CS? | CS focuses on theory & fundamentals, while SE is concerned with __practicalities of developing & delivering good software__
 What is the difference between SE & system engineering? | System engineering is concerned with all aspects of computer-based system development (including hardware, software & process engineering), while SE is part of it
-What are the key challenges facing SE? | Coping with ++increasing diversity++, demands for ++reduced delivery times++ & ++developing trustworthy software++
+What are the key challenges facing SE? | Coping with __increasing diversity__, demands for __reduced delivery times__ & __developing trustworthy software__
 What are the costs of SE? | Roughly 60% are development costs, 40% are testing costs (custom software has higher evolution costs)
-What are the best SE techniques & methods? | ++Different techniques are appropriate for different types of system++
-What differences has the Internet made to SE? | Internet led to the development of massive, highly distributed, ++service-based systems++ & supported the creation of an ++'app' industry++ for mobile devices
+What are the best SE techniques & methods? | __Different techniques are appropriate for different types of system__
+What differences has the Internet made to SE? | Internet led to the development of massive, highly distributed, __service-based systems__ & supported the creation of an __'app' industry__ for mobile devices
 
 __El15ande, St Andrews__
 <hr>
@@ -37,7 +37,7 @@ __El15ande, St Andrews__
 如何定义‘软件’？ | 面向特定顾客或市场的程序及其文档
 优秀软件的特性？ | 为用户提供必需的功能及性能 & 保持可维护性，可信度以及可使用性
 如何定义‘软件工程’？ | 解决软件开发及使用过程中各个方面问题的工程学
-最基本的‘软件工程’行为有哪些？ | 软件的++需求说明++，++研发++，++检验++ 和 ++持续完善++
+最基本的‘软件工程’行为有哪些？ | 软件的__需求说明__，__研发__，__检验__ 和 __持续完善__
 ‘软件工程’和‘计算机科学’的区别是什么？ | CS注重科学上的理论基础（深有体会），SE则注重开发及提供优秀软件的实践过程
 ‘软件工程’和‘系统工程’的区别是什么？ | ‘系统工程’注重整个计算机（硬件，软件，应用的实际运行）系统的设计，SE包含在‘系统工程’中
 ‘软件工程’领域最大的挑战是什么？ | 考虑递增的软件多样性和递减的开发时间，并开发可靠的软件
