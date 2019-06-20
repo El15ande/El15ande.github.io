@@ -1,27 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-12T18:59:15+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande’s GithubPage</title><entry><title type="html">Hello Jekyll: build personal webpage with GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/2019/02/11/Hello-Jekyll.html" rel="alternate" type="text/html" title="Hello Jekyll: build personal webpage with GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+00:00</published><updated>2019-02-11T00:00:00+00:00</updated><id>http://localhost:4000/2019/02/11/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/2019/02/11/Hello-Jekyll.html">&lt;p&gt;Keyword: Web deployment / GithubPage / Jekyll&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-06-20T08:59:12+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your Name</title><subtitle>Web Developer from Somewhere</subtitle><entry><title type="html">Software engineering in a nutshell: FAQ &amp;amp; answers from Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software engineering in a nutshell: FAQ &amp; answers from Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;p&gt;Keyword: Software engineering&lt;/p&gt;
 
-&lt;h3 id=&quot;intro-when-i-really-want-to-write-some-blogs&quot;&gt;Intro: when I really want to write some blogs…&lt;/h3&gt;
+&lt;h2 id=&quot;hint-he-was-a-st-andrews-processor&quot;&gt;Hint: he was a St Andrews processor…&lt;/h2&gt;
+&lt;p&gt;I am reading ‘Software Engineering’ by Ian Sommerville, his ‘FAQs about software engineering’ table on page 20 (in my opinion) is the most elegant and enlightened summary about software engineering. In the post I will share an adapted summary of the table.&lt;/p&gt;
+
+&lt;p&gt;Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Question&lt;/th&gt;
+      &lt;th&gt;Answer&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What is software?&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Computer programs &amp;amp; associated documentation&lt;/strong&gt; for a particular customer or a general market&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What are the attributes of good software?&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Deliver the required functionality &amp;amp; performance&lt;/strong&gt; to the user &amp;amp; &lt;strong&gt;be maintainable, dependable &amp;amp; usable&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What is SE?&lt;/td&gt;
+      &lt;td&gt;An engineering discipline &lt;strong&gt;concerned with all aspects of software production&lt;/strong&gt; from initial conception to operation &amp;amp; maintenance&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What are the fundamental SE activities?&lt;/td&gt;
+      &lt;td&gt;Software specification, development, validation &amp;amp; evolution&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What is the difference between SE &amp;amp; CS?&lt;/td&gt;
+      &lt;td&gt;CS focuses on theory &amp;amp; fundamentals, while SE is concerned with &lt;strong&gt;practicalities of developing &amp;amp; delivering good software&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What is the difference between SE &amp;amp; system engineering?&lt;/td&gt;
+      &lt;td&gt;System engineering is concerned with all aspects of computer-based system development (including hardware, software &amp;amp; process engineering), while SE is part of it&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What are the key challenges facing SE?&lt;/td&gt;
+      &lt;td&gt;Coping with &lt;strong&gt;increasing diversity&lt;/strong&gt;, demands for &lt;strong&gt;reduced delivery times&lt;/strong&gt; &amp;amp; &lt;strong&gt;developing trustworthy software&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What are the costs of SE?&lt;/td&gt;
+      &lt;td&gt;Roughly 60% are development costs, 40% are testing costs (custom software has higher evolution costs)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What are the best SE techniques &amp;amp; methods?&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;Different techniques are appropriate for different types of system&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;What differences has the Internet made to SE?&lt;/td&gt;
+      &lt;td&gt;Internet led to the development of massive, highly distributed, &lt;strong&gt;service-based systems&lt;/strong&gt; &amp;amp; supported the creation of an &lt;strong&gt;‘app’ industry&lt;/strong&gt; for mobile devices&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;El15ande, St Andrews&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;关键词: 软件工程&lt;/p&gt;
+
+&lt;h2 id=&quot;这本书的作者是我们学校的教授&quot;&gt;这本书的作者是我们学校的教授…&lt;/h2&gt;
+&lt;p&gt;在阅读Ian Sommerville的著作《Software Engineering》一书时看到了他所汇总的‘软件工程FAQ’表格，我个人认为他对这些问题的回答十分精简和引人深思。&lt;/p&gt;
+
+&lt;p&gt;书籍：Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;问&lt;/th&gt;
+      &lt;th&gt;答&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;如何定义‘软件’？&lt;/td&gt;
+      &lt;td&gt;面向特定顾客或市场的程序及其文档&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;优秀软件的特性？&lt;/td&gt;
+      &lt;td&gt;为用户提供必需的功能及性能 &amp;amp; 保持可维护性，可信度以及可使用性&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;如何定义‘软件工程’？&lt;/td&gt;
+      &lt;td&gt;解决软件开发及使用过程中各个方面问题的工程学&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;最基本的‘软件工程’行为有哪些？&lt;/td&gt;
+      &lt;td&gt;软件的 &lt;strong&gt;需求说明&lt;/strong&gt;，&lt;strong&gt;研发&lt;/strong&gt;，&lt;strong&gt;检验&lt;/strong&gt; 和 &lt;strong&gt;持续完善&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;‘软件工程’和‘计算机科学’的区别是什么？&lt;/td&gt;
+      &lt;td&gt;CS注重科学上的理论基础（深有体会），SE则注重开发及提供优秀软件的实践过程&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;‘软件工程’和‘系统工程’的区别是什么？&lt;/td&gt;
+      &lt;td&gt;‘系统工程’注重整个计算机（硬件，软件，应用的实际运行）系统的设计，SE包含在‘系统工程’中&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;‘软件工程’领域最大的挑战是什么？&lt;/td&gt;
+      &lt;td&gt;考虑递增的软件多样性和递减的开发时间，并开发可靠的软件&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;‘软件工程’花销占比如何分配？&lt;/td&gt;
+      &lt;td&gt;60%的开发花销 - 40%的测试花销（测试大过天）&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;目前最好的‘软件工程’技术是什么？&lt;/td&gt;
+      &lt;td&gt;因系统而异，不同的技术对应不同的系统&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;互联网对于‘软件工程’的改变有哪些？&lt;/td&gt;
+      &lt;td&gt;1. 互联网引发了对于面向服务的系统研发的热潮（分布式系统）。 2.互联网为移动应用研发业提供了基础（移动设备系统）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;El15ande, 圣安德鲁斯&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Software engineering</summary></entry><entry><title type="html">Hello Jekyll: build personal webpage with GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/Hello-Jekyll/" rel="alternate" type="text/html" title="Hello Jekyll: build personal webpage with GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+08:00</published><updated>2019-02-11T00:00:00+08:00</updated><id>http://localhost:4000/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/Hello-Jekyll/">&lt;p&gt;Keyword: Web deployment / GithubPage / Jekyll&lt;/p&gt;
+
+&lt;h2 id=&quot;intro-when-i-really-want-to-write-some-blogs&quot;&gt;Intro: when I really want to write some blogs…&lt;/h2&gt;
 &lt;p&gt;This is my first CompSci blog &amp;amp; what I have done is just writing some markdown like taking notes on a piece of paper, the whole website is generated by Jekyll &amp;amp; hosted by GithubPage. This is really convenient for programmers (or even non-programmers) to write down their ideas, experiences (or bug complaints) in a few words, then a webpage blog, decorated with nice CSS &amp;amp; clustered in ideal structure, is already there.&lt;br /&gt;
 In this blog, I will share my experience about how to build a simple blogging website, with or without programming experience &amp;amp; totally without any money costs.&lt;/p&gt;
 
-&lt;h3 id=&quot;githubpage-free-probably-website-hosting&quot;&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GithubPage&lt;/a&gt;: free (probably) website hosting&lt;/h3&gt;
+&lt;h2 id=&quot;githubpage-free-probably-website-hosting&quot;&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GithubPage&lt;/a&gt;: free (probably) website hosting&lt;/h2&gt;
 &lt;p&gt;There is a step-by-step tutorial from youtube for non-programmers: &lt;a href=&quot;https://youtu.be/FiOgz3nKpgk&quot;&gt;Tutorial&lt;/a&gt;.&lt;br /&gt;
-And the Git command cheatsheet from Github: &lt;a href=&quot;https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf&quot;&gt;Cheatsheet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A few tips:&lt;/p&gt;
+And the Git command cheatsheet from Github: &lt;a href=&quot;https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf&quot;&gt;Cheatsheet&lt;/a&gt;.&lt;br /&gt;
+A few tips:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;The branching of the repoistory is actually not that necessary to do unless you want a really clustered repository structure or your OCD forces you to do that.&lt;/li&gt;
   &lt;li&gt;For the pulling/pushing/merging activities, I recommand &lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt; or &lt;a href=&quot;https://github.atom.io/&quot;&gt;Atom-Github package&lt;/a&gt;. These Git GUIs are USUALLY better than the cmd lines especially when you have branched your repository or you want to merge branches.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;jekyll-what-i-need-is-just-markdown&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: …what I need is just Markdown!&lt;/h3&gt;
+&lt;h2 id=&quot;jekyll-what-i-need-is-just-markdown&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: …what I need is just Markdown!&lt;/h2&gt;
 &lt;p&gt;Still, a step-by-step tutorial from official website: &lt;a href=&quot;https://jekyllrb.com/docs/step-by-step/01-setup/&quot;&gt;Tutorial&lt;/a&gt;.&lt;br /&gt;
-And a youtube tutorial: &lt;a href=&quot;https://youtu.be/fqFjuX4VZmU&quot;&gt;Tutorial2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The default jekyll folder created by &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new &amp;lt;whereever&amp;gt;&lt;/code&gt; has a documented but complex structure. What I recommand is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new --blank &amp;lt;whereever&amp;gt;&lt;/code&gt; and this will initilise a blank jekyll project. In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, specify &lt;code class=&quot;highlighter-rouge&quot;&gt;theme: minima&lt;/code&gt; to use the Jekyll default (neat) CSS style.&lt;br /&gt;
+And a youtube tutorial: &lt;a href=&quot;https://youtu.be/fqFjuX4VZmU&quot;&gt;Tutorial2&lt;/a&gt;.&lt;br /&gt;
+The default jekyll folder created by &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new &amp;lt;whereever&amp;gt;&lt;/code&gt; has a documented but complex structure. What I recommand is to use &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new --blank &amp;lt;whereever&amp;gt;&lt;/code&gt; and this will initilise a blank jekyll project. In &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, specify &lt;code class=&quot;highlighter-rouge&quot;&gt;theme: minima&lt;/code&gt; to use the Jekyll default (neat) CSS style.&lt;br /&gt;
 What I have created is just a simple default-style Jekyll repository. There are also &lt;code class=&quot;highlighter-rouge&quot;&gt;_include&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt; that can change the header, footer and even CSS/Javascript, there is also a bug displaying ‘HOME’ on the homepage which has not been fixed yet (continuous learning confirmed).&lt;/p&gt;
 
-&lt;h3 id=&quot;retro-future-plan&quot;&gt;Retro: future plan&lt;/h3&gt;
+&lt;h2 id=&quot;retro-future-plan&quot;&gt;Retro: future plan&lt;/h2&gt;
 &lt;p&gt;It is awesome to learn a new way of blogging &amp;amp; hosting the personal webpage, and of cource, it is a good habit for programmers to update their blogs in a period of time. I will try to write down 4-5 blogs per month in both English &amp;amp; Chinese (even in simple German for practice), this is really practical to improve my English writing &amp;amp; programming skills. The topics will cover CompSci(mostly), English writing &amp;amp; German studying experience(sometimes) and some daily blogs(rarely). I would be happy if someone comments or criticises my blogs (I promise this function will be deployed xd).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;El15ande, St Andrews&lt;/strong&gt;&lt;/p&gt;
@@ -29,22 +146,26 @@ What I have created is just a simple default-style Jekyll repository. There are 
 
 &lt;p&gt;关键词: 网站部署 / GithubPage / Jekyll&lt;/p&gt;
 
-&lt;h3 id=&quot;intro-如果我想写博客&quot;&gt;Intro: 如果我想写博客…&lt;/h3&gt;
+&lt;h2 id=&quot;intro-如果我想写博客&quot;&gt;Intro: 如果我想写博客…&lt;/h2&gt;
 &lt;p&gt;这篇博客是我的GithubPage改版后的第一篇博客. 借助Jekyll, 我只需要写一些Markdown, 这些文字就可以自动转变成静态网页并经由GithubPage的服务器进行维护. 能够记录下自己的学习过程和创意, 不论对于程序员还是非程序员来说都是一个不断进步的过程, 使用这两样工具, 我们可以及时且省力的发布BLOG而不必让自己的点子白白溜走.&lt;br /&gt;
 这篇BLOG将分享一些我在开发过程中学习到的经验及反思.&lt;/p&gt;
 
-&lt;h3 id=&quot;githubpage-薅github的羊毛&quot;&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GithubPage&lt;/a&gt;: 薅Github的羊毛&lt;/h3&gt;
+&lt;h2 id=&quot;githubpage-薅github的羊毛&quot;&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GithubPage&lt;/a&gt;: 薅Github的羊毛&lt;/h2&gt;
 &lt;p&gt;GithubPage注册中文教程 (来源CSDN): &lt;a href=&quot;https://blog.csdn.net/baidu_25464429/article/details/80805237&quot;&gt;链接&lt;/a&gt;&lt;br /&gt;
-Git命令行CheatSheet (来源Github): &lt;a href=&quot;(https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)&quot;&gt;链接&lt;/a&gt;&lt;br /&gt;
+Git命令行CheatSheet (来源Github): &lt;a href=&quot;https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf&quot;&gt;链接&lt;/a&gt;&lt;br /&gt;
 GithubPage最大的优势就是免费且安全, 但同时也要求使用者有基本的Git相关知识. 我个人推荐使用&lt;a href=&quot;https://desktop.github.com/&quot;&gt;Github Desktop&lt;/a&gt;或者&lt;a href=&quot;https://github.atom.io/&quot;&gt;Atom-Github package&lt;/a&gt;, 这些Apps有简洁的GUI, 不需要记住冗长的命令也可以自由的操纵Git.&lt;br /&gt;
 新手可能会遇到的另一个问题是分支 (branching), 个人推荐除非OCD晚期, 否则&lt;code class=&quot;highlighter-rouge&quot;&gt;master&lt;/code&gt;足够Jekyll使用.&lt;/p&gt;
 
-&lt;h3 id=&quot;jekyll-我只需要写点markdown&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: …我只需要写点Markdown&lt;/h3&gt;
+&lt;h2 id=&quot;jekyll-我只需要写点markdown&quot;&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: …我只需要写点Markdown&lt;/h2&gt;
 &lt;p&gt;GithubPage注册中文教程 (来源CSDN): &lt;a href=&quot;https://blog.csdn.net/uselym/article/details/73608638&quot;&gt;链接&lt;/a&gt;&lt;br /&gt;
 Jekyll是基于Ruby语言开发的静态网页生成器, 使用者需要先安装Ruby语言包,再使用&lt;code class=&quot;highlighter-rouge&quot;&gt;bundler&lt;/code&gt;安装. 默认配置下的Jekyll文件有详尽的文档注释但同时结构也非常复杂, 我使用的是&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new --blank .&lt;/code&gt;创建一个空白项目, 再创建&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;, 设置&lt;code class=&quot;highlighter-rouge&quot;&gt;theme: minima&lt;/code&gt;从而使用Jekyll默认提供的CSS风格.&lt;br /&gt;
 由于没有&lt;code class=&quot;highlighter-rouge&quot;&gt;_layout&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;_include&lt;/code&gt;配置, 整个网页还存在着一些不足和bug, “&lt;strong&gt;将在近期修复xd&lt;/strong&gt;”&lt;/p&gt;
 
-&lt;h3 id=&quot;retro-未来的计划&quot;&gt;Retro: 未来的计划&lt;/h3&gt;
+&lt;h2 id=&quot;retro-未来的计划&quot;&gt;Retro: 未来的计划&lt;/h2&gt;
 &lt;p&gt;现在我的计划是一个月记录4-5篇BLOG, 主题包括开发经历, 英语写作及德语学习经历, 可能会试着用双语写作. 更多功能”&lt;strong&gt;即将上线xd&lt;/strong&gt;”.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;El15ande, 圣安德鲁斯&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Web deployment / GithubPage / Jekyll</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;El15ande, 圣安德鲁斯&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Web deployment / GithubPage / Jekyll</summary></entry><entry><title type="html">You’re up and running!</title><link href="http://localhost:4000/Hello-World/" rel="alternate" type="text/html" title="You're up and running!" /><published>2014-03-03T00:00:00+08:00</published><updated>2014-03-03T00:00:00+08:00</updated><id>http://localhost:4000/Hello-World</id><content type="html" xml:base="http://localhost:4000/Hello-World/">&lt;p&gt;Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/config.png&quot; alt=&quot;_config.yml&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the &lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;Jekyll Now repository&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name></name></author><summary type="html">Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).</summary></entry></feed>
