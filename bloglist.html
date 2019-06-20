@@ -6,6 +6,11 @@ permalink: /bloglist/
     {% for post in site.posts %}
         <li>
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <div style="font-size: 75%">
+                {{ post.excerpt }}
+                {{ post.date | date: "%Y-%m-%d" }}
+            </div>
+            <br>
         </li>
     {% endfor %}
 </ul>

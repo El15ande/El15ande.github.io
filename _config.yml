@@ -5,16 +5,16 @@ avatar: https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/ap
 # Flags below are optional
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
   email: yw69@st-andrews.ac.uk
+  github: El15ande
+  linkedin: Yuxuan Wang
   facebook: 
   flickr:
-  github: El15ande
   instagram:
-  linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  dribbble:
   twitter:
+  rss: # just type anything here for a working RSS icon
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -57,6 +57,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+  - readme.md
