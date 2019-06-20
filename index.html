@@ -1,25 +1,22 @@
 ---
 layout: default
 ---
-<div class="intro">
-  <h2>The page is currently being reconstructed, will be back soon!</h2>
-  <a href="./docs/Cn_Resume.pdf">Chinese resume</a><br>
-  <a href="./docs/En_Resume_CompSci.pdf">English resume</a>
+<div id="intro">
+  <h1 style="text-align: center">Welcome!</h1>
+  <p>Browse 'About' to check out my information</p>
+  <p>Browse 'Blogs' to check my past blogs</p>
+  <hr>
+  <p>Page construction: content structure & size adjustment (70%)</p>
 </div>
 
-<hr>
+<!-- <div id="recent_blogs" class="posts">
+  <h2 style="text-align: center">Recent blogs</h2>
 
-<div class="posts">
-  {% for post in site.posts %}
+  {% for i in (0..0) %}
     <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
+      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ site.posts[i].title }}</a></h2>
+      <div style="text-align: center" class="entry">{{ site.posts[i].excerpt }}</div>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
   {% endfor %}
-</div>
+</div> -->

@@ -1,15 +1,15 @@
 ---
 layout: page
-title: About
 permalink: /about/
 ---
 
-Some information about you!
+# <center>About me</center>
+I am a penultimate postgraduate student in [University of St Andrews](http://www.st-andrews.ac.uk/), this is my GithubPage for blogs & past projects.  
 
-### More Information
+This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](https://jekyllrb.com/), framework cloned from [Jekyll Now](https://github.com/barryclark/jekyll-now).
 
-A place to include any other types of information that you'd like to include about yourself.
+## <center>My resumes</center>
+[English Resume (英文简历)](../docs/Cn_Resume.pdf)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Chinese Resume (中文简历)](../docs/En_Resume_CompSci.pdf)  
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+## <center>My projects</center>
+[Github Page](https://github.com/El15ande/El15ande.github.io)
