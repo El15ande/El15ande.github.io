@@ -12,3 +12,25 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 - [x] Substitute old website by new Jekyll-now framework
 - [x] Inject personal information
 - [ ] Rewrite website structure: home + blogs + about
+- [x] Write a fixed blog standard
+
+## Blog standard
+1. Jekyll title:
+    ```
+    ---
+    layout = post
+    title = <blog title>
+    date = <Y-M-D>
+    ---
+    ```
+2. Subtitle:
+    ```
+    <hr>
+    Keyword: <keywords>
+    ```
+3. Blog paragraph:
+    ```
+    ## <title>
+    <content>
+    ```
+4. End with name & place

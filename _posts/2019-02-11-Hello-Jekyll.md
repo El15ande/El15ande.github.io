@@ -3,6 +3,7 @@ layout: post
 title: "Hello Jekyll: build personal webpage with GithubPage & Jekyll"
 date: 2019-2-11
 ---
+<hr>
 Keyword: Web deployment / GithubPage / Jekyll
 
 ## Intro: when I really want to write some blogs...
@@ -26,6 +27,8 @@ What I have created is just a simple default-style Jekyll repository. There are 
 It is awesome to learn a new way of blogging & hosting the personal webpage, and of cource, it is a good habit for programmers to update their blogs in a period of time. I will try to write down 4-5 blogs per month in both English & Chinese (even in simple German for practice), this is really practical to improve my English writing & programming skills. The topics will cover CompSci(mostly), English writing & German studying experience(sometimes) and some daily blogs(rarely). I would be happy if someone comments or criticises my blogs (I promise this function will be deployed xd).
 
 __El15ande, St Andrews__
+
+<br>
 <hr>
 关键词: 网站部署 / GithubPage / Jekyll  
 

@@ -3,6 +3,7 @@ layout: post
 title: "Software engineering in a nutshell: FAQ & answers from Ian Sommerville"
 date: 2019-4-9
 ---
+<hr>
 Keyword: Software engineering
 
 ## Hint: he was a St Andrews processor...
@@ -24,6 +25,8 @@ What are the best SE techniques & methods? | __Different techniques are appropri
 What differences has the Internet made to SE? | Internet led to the development of massive, highly distributed, __service-based systems__ & supported the creation of an __'app' industry__ for mobile devices
 
 __El15ande, St Andrews__
+
+<br>
 <hr>
 关键词: 软件工程
 
