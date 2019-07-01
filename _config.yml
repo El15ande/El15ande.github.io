@@ -58,5 +58,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - readme.md
-
-theme: jekyll-theme-cayman
