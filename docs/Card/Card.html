@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Library: react, jQuery --> 
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <title>Card</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+<style>
+    body { background: WhiteSmoke; }
+    h2, p { 
+        margin: 0px; 
+
+        color: gray;
+        font-family: 'Microsoft YaHei';
+    }
+    h2 {
+        margin-top: 3em;
+        text-align: center;
+    }
+
+    #card_list {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-gap: 30px 0px;
+
+        margin: 20px;
+        margin-top: 200px;
+    }
+    .card {
+        height: 200px;
+        width: 400px;
+
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px LightGrey;
+    }
+    .card:hover { box-shadow: 0 0 30px darkgray; }
+    
+    .locked { border: 2px solid darkgray; }
+
+    .card-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+
+        position: absolute;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    .card-info {
+        display: inline-block;
+        margin-left: 100px;
+    }
+    
+    .card-name {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+
+        font-weight: bold;
+    }
+
+    .card-private, .card-locked { display: inline-block; }
+    .active {
+        margin-right: 10px; 
+        border: 1px solid gray;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    
+    .card-projects { margin-top: 1em; }
+    .card-projects-amount {
+        display: inline-block;
+        margin-right: 10px;
+
+        font-size: 1.5em;
+    }
+    .card-projects-project { display: inline-block; }
+
+</style>
+
+<!-- React framework -->
+<script type='text/babel'>
+    //Mock data
+    const mockData = [
+        { name: 'Americano', color: 'red', isPrivate: false, isLocked: false, projects: 5 },
+        { name: 'Espresso', color: 'yellow', isPrivate: false, isLocked: false, projects: 3 },
+        { name: 'Coffee Latte', color: 'blue', isPrivate: true, isLocked: false, projects: 7 },
+        { name: 'Cappuccino', color: 'orange', isPrivate: false, isLocked: false, projects: 10 },
+        { name: 'Mocha Cafe', color: 'green', isPrivate: false, isLocked: false, projects: 12 },
+        { name: 'Hot Water', color: 'purple', isPrivate: true, isLocked: true, projects: 1 }
+    ];
+
+
+    //CardList component
+    function CardList_Component(props) {
+        return (<div id="card_list">
+            {props.arr.map((cardData) => 
+                <Card_Component data={cardData} key={cardData.name}/>
+            )}
+            <NewCard_Component />
+        </div>);
+    }
+
+    /*
+        Card component
+
+        card-circle: circle icon
+        card-info:
+            card-name: .name
+            card-locked: .isLocked
+            card-private: .isPrivate
+            card-projects:
+                card-projects-amount: .projects
+                card-projects-project
+    */
+    function Card_Component(props) {
+        let card_attr = props.data.isLocked ? 'card locked' : 'card'; 
+
+        return <div className={card_attr} onClick={(e) => Enter_Card(e, props.data)}>
+            <canvas className="card-circle" style={{ backgroundColor: props.data.color }}></canvas> 
+            <div className="card-info">
+                <p className="card-name">{props.data.name}</p>
+                <Card_Locked_SubComp isLocked={props.data.isLocked}/>
+                <Card_Private_SubComp isPrivate={props.data.isPrivate}/>
+                <div className="card-projects">
+                    <p className="card-projects card-projects-amount">{props.data.projects}</p>
+                    <p className="card-projects card-projects-project">项目</p>
+                </div>
+            </div>
+        </div>;
+    }
+
+    function Card_Locked_SubComp(props) {
+        return props.isLocked ?
+            <div className="active card-locked"><p>锁定</p></div> : 
+            <div className="card-locked"></div>;
+    }
+
+    function Card_Private_SubComp(props) {
+        return props.isPrivate ?
+            <div className="active card-private"><p>私密</p></div> : 
+            <div className="card-private"></div>;
+    }
+
+    //New card initialisation component
+    function NewCard_Component(props) {
+        return <div className="card" onClick={(e) => Create_Card(e)}>
+            <h2>新建项目组</h2>
+        </div>
+    }
+
+    
+    //Onclick functions
+    function Enter_Card(e, data) {
+        alert('Check console');
+        console.log(data); //Further operation on data
+    }
+
+    function Create_Card(e) {
+        alert('Create a new card'); //Further operation on creating card
+    }
+
+    
+    //Renderer
+    ReactDOM.render(
+        <CardList_Component arr={mockData}/>,
+        document.getElementById('root')
+    );
+</script>
+
+</html>
+
+<!-- 
+    Use icon <image> to substitute Card_Locked_SubComp/Card_Private_SubComp & NewCard_Component paragraphs;
+
+    Known drawbacks:
+        1. .card-projects (number of projects) are not on the same level => css selector .card-isPrivate / .card-isLocked
+        2. Font-family
+        4. Should separate MVC structure
+ -->
