@@ -6,7 +6,7 @@ date: 2019-4-9
 <hr>
 Keyword: Software engineering
 
-## Hint: he was a St Andrews processor...
+## Well, he was a St Andrews processor...
 
 I am reading 'Software Engineering' by Ian Sommerville, his 'FAQs about software engineering' table on page 20 (in my opinion) is the most elegant and enlightened summary about software engineering. In the post I will share an adapted summary of the table.
 
