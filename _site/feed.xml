@@ -1,11 +1,67 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-25T09:58:15+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Declaration Mysteries: Variable Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Declaration-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Declaration Mysteries: Variable Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Declaration-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Declaration-Mysteries/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-25T20:32:05+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
 
-&lt;h6&gt;Keyword: ES6, JavaScript Variable Hoisting&lt;/h6&gt;
+&lt;h6&gt;Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone&lt;/h6&gt;
+
+&lt;h2 id=&quot;long-rest-since-my-last-blog&quot;&gt;Long rest since my last blog&lt;/h2&gt;
+
+&lt;p&gt;Recently I have worked on SaaS front-end issues (using JavaScript libraries/frameworks such as Bootstrap &amp;amp; Vue.js). After fixing a series of bugs caused by the ‘mysterious’ hoisting mechanism, I am confused with ‘What should we use when we declare different types of variables/functions?’ &amp;amp; ‘How should we avoid referencing &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;s?’ and I decide to take a research on these questions.&lt;br /&gt;
+In this blog I would like to share &lt;u&gt;how hoisting works in JavaScript&lt;/u&gt; &amp;amp; &lt;u&gt;What are the proper ways to use&lt;/u&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;javascript-variable-basis&quot;&gt;JavaScript variable basis&lt;/h2&gt;
+
+&lt;p&gt;It has been 4 years since ES6 introduced the definition of block-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;) &amp;amp; global/function-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;) variables, though ES6 is &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;STILL not supported by some compilers &amp;amp; browsers&lt;/a&gt;, it is highly recommanded for JavaScript newbies to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly and how their variables/functions are hoisted. In my opinion, &lt;u&gt;using &lt;/u&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;&lt;u&gt;s everywhere is absolutely correct (concerning unstable environments), but it is better to separate different types of constants/variables (or even functions) apart in order to &lt;/u&gt;&lt;a href=&quot;https://github.com/airbnb/javascript#variables--const-let-group&quot;&gt;improve code readability&lt;/a&gt;_&lt;/p&gt;
+
+&lt;p&gt;As a simple reminder, there are 3 ways to declare Javascript variables:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const foo = 'bar'
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;This declares an ‘immutable’ constant like &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; in C++ or &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt; in Java. In fact, the attributes of the &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; object can be reassigned:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const x = { foo: 'bar' };
+    x.foo = 'baz';
+    console.log(x.foo); // baz
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;And the elements of the &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; array can be reassigned as well:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const x = ['foo', 'bar'];
+    x[1] = 'baz';
+    console.log(x); // ['foo', 'baz']
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    var foo = 'bar'
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;The scope of &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; variable depends on &lt;u&gt;its current execution context&lt;/u&gt;, which is function-scoped:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    funciton f() {
+        var foo = 'bar';
+        console.log(foo); // bar
+    }
+    console.log(foo); // Uncaught ReferenceError
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;Or global-scoped if it is declared outside any function. It is noticable that &lt;u&gt;assigning a value to an undeclared variable implicitly creates it as a global variable &lt;/u&gt;(&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Description&quot;&gt;reference&lt;/a&gt;)_, so &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; is necessary for every variable declarations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    let foo = 'bar'
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variable is block-scoped, which limited itself in its defined block:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    function f() {
+        // Function scope starts
+        let foo = 'bar';
+        console.log(foo); // bar
+        if (1) { // If-statement scope starts
+            let foo = 'baz';
+            console.log(foo); // baz
+        } // If-statement scope ends
+        console.log(foo); // bar
+    } // Function scope ends
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;It is also noticable that&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;h6&gt;关键词: ES6, JavaScript变量提升&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Variable Hoisting</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
+&lt;h6&gt;关键词: ES6, JavaScript变量提升&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
 
 &lt;h6&gt;Keyword: Software Engineering&lt;/h6&gt;
 
