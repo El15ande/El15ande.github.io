@@ -287,3 +287,23 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+//Customised font;
+body { 
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; 
+}
+//Customised table style;
+table, table th, table tr, table td {
+	border: 1px solid;
+	padding: 5px;
+}
+table th {
+	font-size: 1.5em;
+}
+//Customised blog title style;
+.post h1, .post h2 {
+	text-align: center;
+}
+.post h6, .date {
+  text-align: right;
+}

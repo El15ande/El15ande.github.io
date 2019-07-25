@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Hello Jekyll: build personal webpage with GithubPage & Jekyll"
+title: "Hello Jekyll: Build Personal Webpage With GithubPage & Jekyll"
 date: 2019-2-11
 ---
 <hr>
-Keyword: Web deployment / GithubPage / Jekyll
+<h6>Keyword: Web Project Deployment / GithubPage / Jekyll</h6>
 
 ## Intro: when I really want to write some blogs...
 
@@ -30,11 +30,10 @@ What I have created is just a simple default-style Jekyll repository. There are 
 
 It is awesome to learn a new way of blogging & hosting the personal webpage, and of cource, it is a good habit for programmers to update their blogs in a period of time. I will try to write down 4-5 blogs per month in both English & Chinese (even in simple German for practice), this is really practical to improve my English writing & programming skills. The topics will cover CompSci(mostly), English writing & German studying experience(sometimes) and some daily blogs(rarely). I would be happy if someone comments or criticises my blogs (I promise this function will be deployed xd).
 
-__El15ande, St Andrews__
-
+_El15ande, St Andrews_
 <br>
 <hr>
-关键词: 网站部署 / GithubPage / Jekyll  
+<h6>关键词: 网站部署 / GithubPage / Jekyll</h6>  
 
 ## Intro: 如果我想写博客...
 
@@ -58,4 +57,4 @@ Jekyll是基于Ruby语言开发的静态网页生成器, 使用者需要先安�
 
 现在我的计划是一个月记录4-5篇BLOG, 主题包括开发经历, 英语写作及德语学习经历, 可能会试着用双语写作. 更多功能"__即将上线xd__".
 
-__El15ande, 圣安德鲁斯__
+_El15ande, 圣安德鲁斯_

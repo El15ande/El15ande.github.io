@@ -1,21 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-24T17:21:13+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">Temporal Dead Zone: ES6 variable declaration summary</title><link href="http://localhost:4000/Temporal-Dead-Zone/" rel="alternate" type="text/html" title="Temporal Dead Zone: ES6 variable declaration summary" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/Temporal-Dead-Zone</id><content type="html" xml:base="http://localhost:4000/Temporal-Dead-Zone/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-25T09:58:15+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Declaration Mysteries: Variable Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Declaration-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Declaration Mysteries: Variable Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Declaration-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Declaration-Mysteries/">&lt;hr /&gt;
 
-&lt;p&gt;Keyword: Javascript, ES6&lt;/p&gt;
-
-&lt;h2 id=&quot;long-rest-after-my-last-blog&quot;&gt;Long rest after my last blog…&lt;/h2&gt;
+&lt;h6&gt;Keyword: ES6, JavaScript Variable Hoisting&lt;/h6&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;关键词：Javascript, ES6&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Javascript, ES6</summary></entry><entry><title type="html">Software engineering in a nutshell: FAQ &amp;amp; answers from Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software engineering in a nutshell: FAQ &amp; answers from Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
+&lt;h6&gt;关键词: ES6, JavaScript变量提升&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Variable Hoisting</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
 
-&lt;p&gt;Keyword: Software engineering&lt;/p&gt;
+&lt;h6&gt;Keyword: Software Engineering&lt;/h6&gt;
 
 &lt;h2 id=&quot;well-he-was-a-st-andrews-processor&quot;&gt;Well, he was a St Andrews processor…&lt;/h2&gt;
 
 &lt;p&gt;I am reading ‘Software Engineering’ by Ian Sommerville, his ‘FAQs about software engineering’ table on page 20 (in my opinion) is the most elegant and enlightened summary about software engineering. In the post I will share an adapted summary of the table.&lt;/p&gt;
-
-&lt;p&gt;Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -27,15 +23,15 @@
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What is software?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Computer programs &amp;amp; associated documentation&lt;/strong&gt; for a particular customer or a general market&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;u&gt;Computer programs &amp;amp; associated documentation&lt;/u&gt; for a particular customer or a general market&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What are the attributes of good software?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Deliver the required functionality &amp;amp; performance&lt;/strong&gt; to the user &amp;amp; &lt;strong&gt;be maintainable, dependable &amp;amp; usable&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;u&gt;Deliver the required functionality &amp;amp; performance&lt;/u&gt; to the user &amp;amp; &lt;u&gt;be maintainable, dependable &amp;amp; usable&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What is SE?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;An engineering discipline &lt;strong&gt;concerned with all aspects of software production&lt;/strong&gt; from initial conception to operation &amp;amp; maintenance&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;An engineering discipline &lt;u&gt;concerned with all aspects of software production&lt;u&gt; from initial conception to operation &amp;amp; maintenance&lt;/u&gt;&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What are the fundamental SE activities?&lt;/td&gt;
@@ -43,7 +39,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What is the difference between SE &amp;amp; CS?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;CS focuses on theory &amp;amp; fundamentals, while SE is concerned with &lt;strong&gt;practicalities of developing &amp;amp; delivering good software&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CS focuses on theory &amp;amp; fundamentals, while SE is concerned with &lt;u&gt;practicalities of developing &amp;amp; delivering good software&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What is the difference between SE &amp;amp; system engineering?&lt;/td&gt;
@@ -51,7 +47,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What are the key challenges facing SE?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Coping with &lt;strong&gt;increasing diversity&lt;/strong&gt;, demands for &lt;strong&gt;reduced delivery times&lt;/strong&gt; &amp;amp; &lt;strong&gt;developing trustworthy software&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Coping with &lt;u&gt;increasing diversity&lt;/u&gt;, demands for &lt;u&gt;reduced delivery times&lt;/u&gt; &amp;amp; &lt;u&gt;developing trustworthy software&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What are the costs of SE?&lt;/td&gt;
@@ -59,27 +55,26 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What are the best SE techniques &amp;amp; methods?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;Different techniques are appropriate for different types of system&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;u&gt;Different techniques are appropriate for different types of system&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;What differences has the Internet made to SE?&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;Internet led to the development of massive, highly distributed, &lt;strong&gt;service-based systems&lt;/strong&gt; &amp;amp; supported the creation of an &lt;strong&gt;‘app’ industry&lt;/strong&gt; for mobile devices&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Internet led to the development of massive, highly distributed, &lt;u&gt;service-based systems&lt;/u&gt; &amp;amp; supported the creation of an &lt;u&gt;'app' industry&lt;/u&gt; for mobile devices&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;El15ande, St Andrews&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;关键词: 软件工程&lt;/p&gt;
+&lt;h6&gt;关键词: 软件工程&lt;/h6&gt;
 
 &lt;h2 id=&quot;这本书的作者是我们学校的教授&quot;&gt;这本书的作者是我们学校的教授…&lt;/h2&gt;
 
 &lt;p&gt;在阅读Ian Sommerville的著作《Software Engineering》一书时看到了他所汇总的‘软件工程FAQ’表格，我个人认为他对这些问题的回答十分精简和引人深思。&lt;/p&gt;
-
-&lt;p&gt;书籍：Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -103,7 +98,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;最基本的‘软件工程’行为有哪些？&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;软件的 &lt;strong&gt;需求说明&lt;/strong&gt;，&lt;strong&gt;研发&lt;/strong&gt;，&lt;strong&gt;检验&lt;/strong&gt; 和 &lt;strong&gt;持续完善&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;软件的 &lt;u&gt;需求说明，研发，检验 和 持续完善&lt;/u&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;‘软件工程’和‘计算机科学’的区别是什么？&lt;/td&gt;
@@ -127,14 +122,16 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td style=&quot;text-align: center&quot;&gt;互联网对于‘软件工程’的改变有哪些？&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1. 互联网引发了对于面向服务的系统研发的热潮（分布式系统）/ 2.互联网为移动应用研发业提供了基础（移动设备系统）&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1. 互联网引发了对于&lt;u&gt;面向服务的系统研发&lt;/u&gt;的热潮（分布式系统）/ 2.互联网为&lt;u&gt;移动应用研发业&lt;/u&gt;提供了基础（移动设备系统）&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;strong&gt;El15ande, 圣安德鲁斯&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Software engineering</summary></entry><entry><title type="html">Hello Jekyll: build personal webpage with GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/Hello-Jekyll/" rel="alternate" type="text/html" title="Hello Jekyll: build personal webpage with GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+08:00</published><updated>2019-02-11T00:00:00+08:00</updated><id>http://localhost:4000/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/Hello-Jekyll/">&lt;hr /&gt;
+&lt;p&gt;书籍：Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
-&lt;p&gt;Keyword: Web deployment / GithubPage / Jekyll&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Software Engineering</summary></entry><entry><title type="html">Hello Jekyll: Build Personal Webpage With GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/Hello-Jekyll/" rel="alternate" type="text/html" title="Hello Jekyll: Build Personal Webpage With GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+08:00</published><updated>2019-02-11T00:00:00+08:00</updated><id>http://localhost:4000/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/Hello-Jekyll/">&lt;hr /&gt;
+
+&lt;h6&gt;Keyword: Web Project Deployment / GithubPage / Jekyll&lt;/h6&gt;
 
 &lt;h2 id=&quot;intro-when-i-really-want-to-write-some-blogs&quot;&gt;Intro: when I really want to write some blogs…&lt;/h2&gt;
 
@@ -162,12 +159,11 @@ What I have created is just a simple default-style Jekyll repository. There are 
 
 &lt;p&gt;It is awesome to learn a new way of blogging &amp;amp; hosting the personal webpage, and of cource, it is a good habit for programmers to update their blogs in a period of time. I will try to write down 4-5 blogs per month in both English &amp;amp; Chinese (even in simple German for practice), this is really practical to improve my English writing &amp;amp; programming skills. The topics will cover CompSci(mostly), English writing &amp;amp; German studying experience(sometimes) and some daily blogs(rarely). I would be happy if someone comments or criticises my blogs (I promise this function will be deployed xd).&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;El15ande, St Andrews&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;p&gt;关键词: 网站部署 / GithubPage / Jekyll&lt;/p&gt;
+&lt;h6&gt;关键词: 网站部署 / GithubPage / Jekyll&lt;/h6&gt;
 
 &lt;h2 id=&quot;intro-如果我想写博客&quot;&gt;Intro: 如果我想写博客…&lt;/h2&gt;
 
@@ -191,4 +187,4 @@ Jekyll是基于Ruby语言开发的静态网页生成器, 使用者需要先安�
 
 &lt;p&gt;现在我的计划是一个月记录4-5篇BLOG, 主题包括开发经历, 英语写作及德语学习经历, 可能会试着用双语写作. 更多功能”&lt;strong&gt;即将上线xd&lt;/strong&gt;”.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;El15ande, 圣安德鲁斯&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Web deployment / GithubPage / Jekyll</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Web Project Deployment / GithubPage / Jekyll</summary></entry></feed>
