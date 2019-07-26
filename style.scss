@@ -307,3 +307,11 @@ table th {
 .post h6, .date {
   text-align: right;
 }
+.post pre {
+  border-left: 2px solid crimson;
+  padding-left: 20px;
+}
+.post blockquote p {
+  font-size: 15px !important;
+}
+

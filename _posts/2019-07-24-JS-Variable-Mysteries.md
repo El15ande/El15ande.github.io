@@ -167,11 +167,24 @@ the `LexicalEnvironment` represents the scope which the variables exist.
 
 > The variables are created when their containing Lexical Environment is instantiated but may not be accessed in any way until the variable’s LexicalBinding is evaluated.  
 
-This proves that `const/let` variables do hoist at the moment of their scope is created, and the duration from the initialisation of the environment to the evaluation of variables is the TDZ.
+This proves that `const/let` variables do hoist at the moment of their scope is created, and the duration from the initialisation of the environment to the evaluation of variables is the TDZ (referenced as 'may not accessed in any way').
 
-> A variable defined by a LexicalBinding with an Initializer is assigned the value of its Initializer’s AssignmentExpression when the LexicalBinding is evaluated, not when the variable is created. If a LexicalBinding in a let declaration does not have an Initializer the variable is assigned the value undefined when the LexicalBinding is evaluated.  
+> A variable defined by a LexicalBinding with an Initializer is assigned the value of its Initializer’s AssignmentExpression when the LexicalBinding is evaluated, not when the variable is created.  
 
-This is the declaration
+> If a LexicalBinding in a `let` declaration does not have an Initializer the variable is assigned the value `undefined` when the LexicalBinding is evaluated.  
+
+These declarations are not related to TDZ but referencing the basic properties of JavaScript variables: if a variable is assigned a value, the value will be usable only after the assignment (not after created, like `foo1` or `foo3` above), if a variable is not assigned any values, the default value will be `undefined` (after exiting TDZ, the variables work in the same way):
+```Javascript
+if(true) {
+    // TDZ
+    let x; // TDZ ends
+    // The above equals to `let x = undefined`
+
+    console.log(x); // -> undefined
+}
+```
+
+TBC...
 
 <hr>
 ###### _关键词: ES6, JavaScript变量提升, 暂存死区(TDZ)_

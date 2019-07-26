@@ -1,66 +1,191 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-26T10:25:11+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-26T17:53:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
 
 &lt;h6 id=&quot;keyword-es6-javascript-hoisting-temporal-dead-zone&quot;&gt;&lt;em&gt;Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone&lt;/em&gt;&lt;/h6&gt;
 
 &lt;h2 id=&quot;long-rest-since-my-last-blog&quot;&gt;Long rest since my last blog&lt;/h2&gt;
 
 &lt;p&gt;Recently I have worked on SaaS front-end issues (using JavaScript libraries/frameworks such as Bootstrap &amp;amp; Vue.js). After fixing a series of bugs caused by the ‘mysterious’ hoisting mechanism, I am confused with ‘What should we use when we declare different types of variables/functions?’ &amp;amp; ‘How should we avoid referencing &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;s?’ and I decide to take a research on these questions.&lt;br /&gt;
-In this blog I would like to share &lt;u&gt;how hoisting works in JavaScript&lt;/u&gt; &amp;amp; &lt;u&gt;What are the proper ways to use&lt;/u&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;.&lt;/p&gt;
+In this blog I would like to share how hoisting works in JavaScript &amp;amp; what are the proper ways to use &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;javascript-variable-basis&quot;&gt;JavaScript variable basis&lt;/h2&gt;
+&lt;h2 id=&quot;javascript-variable-basis-easy--&quot;&gt;JavaScript variable basis (easy :) )&lt;/h2&gt;
 
-&lt;p&gt;It has been 4 years since ES6 introduced the definition of block-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;) &amp;amp; global/function-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;) variables, though ES6 is &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;STILL not supported by some compilers &amp;amp; browsers&lt;/a&gt;, it is highly recommanded for JavaScript newbies to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly and how their variables/functions are hoisted. In my opinion, &lt;u&gt;using &lt;/u&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;&lt;u&gt;s everywhere is absolutely correct (concerning unstable environments), but it is better to separate different types of constants/variables (or even functions) apart in order to &lt;/u&gt;&lt;a href=&quot;https://github.com/airbnb/javascript#variables--const-let-group&quot;&gt;improve code readability&lt;/a&gt;_&lt;/p&gt;
+&lt;p&gt;It has been 4 years since ES6 introduced the definition of block-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;) &amp;amp; global/function-scoped (&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;) variables, though ES6 is &lt;a href=&quot;http://kangax.github.io/compat-table/es6/&quot;&gt;STILL not supported by some compilers &amp;amp; browsers&lt;/a&gt;, it is highly recommanded for JavaScript newbies to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly and how their variables/functions are hoisted. In my opinion, using &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;s everywhere is absolutely correct (concerning unstable environments), but it is better to separate different types of constants/variables (or even functions) apart in order to &lt;a href=&quot;https://github.com/airbnb/javascript#variables--const-let-group&quot;&gt;improve code readability&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;As a simple reminder, there are 3 ways to declare Javascript variables:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const foo = 'bar'
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;const foo = 'bar'&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
     &lt;p&gt;This declares an ‘immutable’ constant like &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; in C++ or &lt;code class=&quot;highlighter-rouge&quot;&gt;final&lt;/code&gt; in Java. In fact, the attributes of the &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; object can be reassigned:&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const x = { foo: 'bar' };
-    x.foo = 'baz';
-    console.log(x.foo); // baz
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     const x = { foo: 'bar' };
+     x.foo = 'baz';
+     console.log(x.foo); // -&amp;gt; baz
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;And the elements of the &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; array can be reassigned as well:&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    const x = ['foo', 'bar'];
-    x[1] = 'baz';
-    console.log(x); // ['foo', 'baz']
+    &lt;p&gt;and the elements of the &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; array can be reassigned as well:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     const x = ['foo', 'bar'];
+     x[1] = 'baz';
+     console.log(x); // -&amp;gt; ['foo', 'baz']
 &lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    var foo = 'bar'
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;var foo = 'bar'&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
     &lt;p&gt;The scope of &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; variable depends on &lt;u&gt;its current execution context&lt;/u&gt;, which is function-scoped:&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    funciton f() {
-        var foo = 'bar';
-        console.log(foo); // bar
-    }
-    console.log(foo); // Uncaught ReferenceError
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     funciton f() {
+         var foo = 'bar';
+         console.log(foo); // -&amp;gt; bar
+     }
+     console.log(foo); // -&amp;gt; Uncaught ReferenceError
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;Or global-scoped if it is declared outside any function. It is noticable that &lt;u&gt;assigning a value to an undeclared variable implicitly creates it as a global variable &lt;/u&gt;(&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Description&quot;&gt;reference&lt;/a&gt;)_, so &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; is necessary for every variable declarations.&lt;/p&gt;
+    &lt;p&gt;or global-scoped if it is declared outside any function. It is noticable that &lt;u&gt;assigning a value to an undeclared variable implicitly creates it as a global variable &lt;/u&gt;(&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#Description&quot;&gt;reference&lt;/a&gt;)_, so at least one of &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; should be used when declaraing a variable.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    let foo = 'bar'
-&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let foo = 'bar'&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
     &lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variable is block-scoped, which limited itself in its defined block:&lt;/p&gt;
-    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    function f() {
-        // Function scope starts
-        let foo = 'bar';
-        console.log(foo); // bar
-        if (1) { // If-statement scope starts
-            let foo = 'baz';
-            console.log(foo); // baz
-        } // If-statement scope ends
-        console.log(foo); // bar
-    } // Function scope ends
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     function f() {
+         // Function scope starts
+         let foo = 'bar';
+         console.log(foo); // -&amp;gt; bar
+         if (1) { // If-statement scope starts
+             let foo = 'baz';
+             console.log(foo); // -&amp;gt; baz
+         } // If-statement scope ends
+         console.log(foo); // -&amp;gt; bar
+     } // Function scope ends
 &lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;It is also noticable that&lt;/p&gt;
+    &lt;p&gt;it is also noticable that global &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variables will not create properties for &lt;code class=&quot;highlighter-rouge&quot;&gt;window&lt;/code&gt; object, while global &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; variables will.&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     var x = 1;
+     let y = 2;
+     console.log(window.x); // -&amp;gt; 1
+     console.log(window.y); // -&amp;gt; undefined
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hoisting: the conceptual definition of this semantic is: &lt;u&gt;variables &amp;amp; functions declarations are physically moved to the top of Javascript code&lt;/u&gt;, so&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     foo = 'bar'; // Initialisation
+     console.log(foo); // -&amp;gt; bar
+     ...
+     var foo; // Declaration
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;works when you run the code, because it equals to:&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;     var foo; // Declaration hoisted at the top
+     ...
+     foo = 'bar'; // Initialisation
+     console.log(foo) // -&amp;gt; bar
+&lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
+&lt;p&gt;The hoisting mechanism confuses many people at first (including me and my friends when we studied it) as it does not follow the ‘declare-before-use’ rule in other languages. In fact, &lt;u&gt;JavaScript put all variables &amp;amp; function declarations into the memory at the compilation stage, but does not change the code sequence (initialisation sequence)&lt;/u&gt;, so using a variable before it is initialised is still invalid:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    console.log(foo); // -&amp;gt; undefined
+    var foo; // Declaration hoisted at the top
+    foo = 'bar' // Initialisation after it is used
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice that:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    var foo = 'bar';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;is an initilisation, so this will not be hoisted, as shown in the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    var x = 1; // Initialisation
+    console.log(x + &quot;&amp;amp;&quot; + y) // -&amp;gt; 1&amp;amp;undefined
+    var y = 2; // Initialisation that is not hoisted
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Reference:&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var&quot;&gt;MDN developer guide: var&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let&quot;&gt;MDN developer guide: let&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/Hoisting&quot;&gt;MDN developer guide: hoisting&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;temporal-dead-zone-still-ok--&quot;&gt;Temporal Dead Zone (still OK :| )&lt;/h2&gt;
+&lt;p&gt;Consider the following code in the global scope:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    console.log(foo1); // -&amp;gt; undefined
+    var foo1 = 'bar';
+
+    foo2 = 'barr'
+    console.log(foo2); // -&amp;gt; 'barr'
+    var foo2;
+
+    console.log(foo3); // Uncaught ReferenceError
+    let foo3 = 'baz';
+
+    console.log(foo4); // Uncaught ReferenceError
+    let foo4;
+    foo4 = 'bazz';
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can simply understand the code: &lt;code class=&quot;highlighter-rouge&quot;&gt;foo1&lt;/code&gt; is used before initialisation and thus it should be &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; at the moment it is used, while &lt;code class=&quot;highlighter-rouge&quot;&gt;foo2&lt;/code&gt; is a typical example of hoisting. &lt;code class=&quot;highlighter-rouge&quot;&gt;foo3&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;foo4&lt;/code&gt; are both used before initialisation, but they throw &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;, this indicates that _&lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;_&lt;u&gt;variables are not initialised until their definition is evaluated&lt;/u&gt;. Furthermore, consider &lt;code class=&quot;highlighter-rouge&quot;&gt;foo5&lt;/code&gt; below:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    foo5 = 'foobar';
+    console.log(foo5); // Uncaught ReferenceError
+    let foo5;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;this indicates that _&lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;_&lt;u&gt;variables are not hoisted&lt;/u&gt;. In fact, &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variables are in Temporal Dead Zone (TDZ) &lt;u&gt;from the start of the block until the initialisation is processed&lt;/u&gt;. Variables in TDZ will always throw &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt; as it is an uninitialised state, even using &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;if(true) { //TDZ starts
+    // Using typeof on an undeclared variable results in undefined
+    console.log(typeof x); // -&amp;gt; undefined
+
+    ... // TDZ continues
+    console.log(foo); // Uncaught ReferenceError
+
+    // Using typeof on variables in TDZ results in UncaughtError
+    console.log(typeof foo);// Uncaught ReferenceError
+    
+    let foo = 'bar'; // Varible initialised, TDZ ends
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Due to the existance of TDZ, variables used before initialisation are going to throw &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;s, this motivates new JavaScript programmers to follow the ‘declare-initialise-use’ flow to create &amp;amp; use variables (which produces more modular &amp;amp; cleaner code).&lt;/p&gt;
+
+&lt;p&gt;I would highly recommand new JavaScript programmers to try codes in editors and try to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly and stop here to grab a cup of coffee because the rest contents will focus on JavaScript lexical environment. However if you are curious about the mechanism of &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;, or you have been working on JavaScript for a long time, please proceed.&lt;/p&gt;
+
+&lt;p&gt;Reference:&lt;br /&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone&quot;&gt;MDN developer guide: TDZ&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tdz-towards-hoisting-not-ok--&quot;&gt;TDZ towards hoisting (not OK :( )&lt;/h2&gt;
+
+&lt;p&gt;Starting from TDZ, the statement of &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variables do not hoist is acutally an over-simplified summary: &lt;u&gt;these variables hoist but throw errors when used before initialised, rather than return &lt;/u&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;_, consider the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    let x = 'foo';
+    if(true) {
+        console.log(x); // Uncaught ReferenceError
+        let x = 'foobar';
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On execution, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; inside the block is hoisted as the first statement in the block, this produces TDZ and the console statement in TDZ generates &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt; which seems reasonable. In fact, ES6 standard explained in &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations&quot;&gt;13.3.1&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; declarations define variables that are scoped to &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts&quot;&gt;the running execution context&lt;/a&gt;’s &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts&quot;&gt;LexicalEnvironment&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;LexicalEnvironment&lt;/code&gt; represents the scope which the variables exist.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The variables are created when their containing Lexical Environment is instantiated but may not be accessed in any way until the variable’s LexicalBinding is evaluated.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This proves that &lt;code class=&quot;highlighter-rouge&quot;&gt;const/let&lt;/code&gt; variables do hoist at the moment of their scope is created, and the duration from the initialisation of the environment to the evaluation of variables is the TDZ (referenced as ‘may not accessed in any way’).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A variable defined by a LexicalBinding with an Initializer is assigned the value of its Initializer’s AssignmentExpression when the LexicalBinding is evaluated, not when the variable is created.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If a LexicalBinding in a &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; declaration does not have an Initializer the variable is assigned the value &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; when the LexicalBinding is evaluated.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;These declarations are not related to TDZ but referencing the basic properties of JavaScript variables: if a variable is assigned a value, the value will be usable only after the assignment (not after created, like &lt;code class=&quot;highlighter-rouge&quot;&gt;foo1&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;foo3&lt;/code&gt; above), if a variable is not assigned any values, the default value will be &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; (after exiting TDZ, the variables work in the same way):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;if(true) {
+    // TDZ
+    let x; // TDZ ends
+    // The above equals to `let x = undefined`
+
+    console.log(x); // -&amp;gt; undefined
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;TBC…&lt;/p&gt;
+
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;关键词-es6-javascript变量提升&quot;&gt;&lt;em&gt;关键词: ES6, JavaScript变量提升&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
+&lt;h6 id=&quot;关键词-es6-javascript变量提升-暂存死区tdz&quot;&gt;&lt;em&gt;关键词: ES6, JavaScript变量提升, 暂存死区(TDZ)&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
 
 &lt;h6 id=&quot;keyword-software-engineering&quot;&gt;&lt;em&gt;Keyword: Software Engineering&lt;/em&gt;&lt;/h6&gt;
 
