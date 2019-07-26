@@ -17,4 +17,3 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 ## <center>My projects</center>
 
 [Github Page](https://github.com/El15ande/El15ande.github.io)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[React Framework: Card Page (Demo)](https://github.com/El15ande/El15ande.github.io/tree/master/docs/Card)

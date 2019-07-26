@@ -38,7 +38,7 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 2. Subtitle:
     ```
     <hr>
-    <h6>Keyword: <keywords></h6>
+    ###### _Keyword: <keywords>_
     ```
 3. Blog paragraph:
     ```
@@ -47,7 +47,8 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
     ```
 4. Break line between English & Chinese translation:
     ```
-    <br>
     <hr>
     ```
 5. End with name & place
+    ```
+    ###### _<author>, <place>_

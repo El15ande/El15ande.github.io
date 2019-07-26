@@ -4,7 +4,7 @@ title: "Software Engineering In A Nutshell: FAQ & Answers From Ian Sommerville"
 date: 2019-4-9
 ---
 <hr>
-<h6>Keyword: Software Engineering</h6>
+###### _Keyword: Software Engineering_
 
 ## Well, he was a St Andrews processor...
 
@@ -25,12 +25,11 @@ What differences has the Internet made to SE? | Internet led to the development 
 
 Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.
 
-_El15ande, St Andrews_
-<br>
+###### _El15ande, St Andrews_
 <hr>
-<h6>关键词: 软件工程</h6>
+###### _关键词: 软件工程_
 
-## 这本书的作者是我们学校的教授...
+## 这本书的作者曾是我们学校的教授...
 
 在阅读Ian Sommerville的著作《Software Engineering》一书时看到了他所汇总的‘软件工程FAQ’表格，我个人认为他对这些问题的回答十分精简和引人深思。
 
@@ -49,4 +48,4 @@ _El15ande, St Andrews_
 
 书籍：Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.
 
-_El15ande, 圣安德鲁斯_
+###### _El15ande, 圣安德鲁斯_

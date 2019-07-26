@@ -4,7 +4,7 @@ title: "JavaScript Variables Mysteries: Hoisting & Temporal Dead Zone"
 date: 2019-7-24
 ---
 <hr>
-<h6>Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</h6>
+###### _Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone_
 
 ## Long rest since my last blog
 
@@ -63,6 +63,5 @@ As a simple reminder, there are 3 ways to declare Javascript variables:
     ```
     It is also noticable that 
 
-<br>
 <hr>
-<h6>关键词: ES6, JavaScript变量提升</h6>
+###### _关键词: ES6, JavaScript变量提升_

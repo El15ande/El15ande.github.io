@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-25T20:32:05+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-26T10:25:11+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
 
-&lt;h6&gt;Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone&lt;/h6&gt;
+&lt;h6 id=&quot;keyword-es6-javascript-hoisting-temporal-dead-zone&quot;&gt;&lt;em&gt;Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone&lt;/em&gt;&lt;/h6&gt;
 
 &lt;h2 id=&quot;long-rest-since-my-last-blog&quot;&gt;Long rest since my last blog&lt;/h2&gt;
 
@@ -58,12 +58,11 @@ In this blog I would like to share &lt;u&gt;how hoisting works in JavaScript&lt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 
-&lt;h6&gt;关键词: ES6, JavaScript变量提升&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
+&lt;h6 id=&quot;关键词-es6-javascript变量提升&quot;&gt;&lt;em&gt;关键词: ES6, JavaScript变量提升&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
 
-&lt;h6&gt;Keyword: Software Engineering&lt;/h6&gt;
+&lt;h6 id=&quot;keyword-software-engineering&quot;&gt;&lt;em&gt;Keyword: Software Engineering&lt;/em&gt;&lt;/h6&gt;
 
 &lt;h2 id=&quot;well-he-was-a-st-andrews-processor&quot;&gt;Well, he was a St Andrews processor…&lt;/h2&gt;
 
@@ -122,13 +121,12 @@ In this blog I would like to share &lt;u&gt;how hoisting works in JavaScript&lt;
 
 &lt;p&gt;Reference: Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;el15ande-st-andrews&quot;&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;&lt;/h6&gt;
 &lt;hr /&gt;
 
-&lt;h6&gt;关键词: 软件工程&lt;/h6&gt;
+&lt;h6 id=&quot;关键词-软件工程&quot;&gt;&lt;em&gt;关键词: 软件工程&lt;/em&gt;&lt;/h6&gt;
 
-&lt;h2 id=&quot;这本书的作者是我们学校的教授&quot;&gt;这本书的作者是我们学校的教授…&lt;/h2&gt;
+&lt;h2 id=&quot;这本书的作者曾是我们学校的教授&quot;&gt;这本书的作者曾是我们学校的教授…&lt;/h2&gt;
 
 &lt;p&gt;在阅读Ian Sommerville的著作《Software Engineering》一书时看到了他所汇总的‘软件工程FAQ’表格，我个人认为他对这些问题的回答十分精简和引人深思。&lt;/p&gt;
 
@@ -185,9 +183,9 @@ In this blog I would like to share &lt;u&gt;how hoisting works in JavaScript&lt;
 
 &lt;p&gt;书籍：Ian Sommerville. 2015. Software Engineering (10th ed.). Pearson.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Software Engineering</summary></entry><entry><title type="html">Hello Jekyll: Build Personal Webpage With GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/Hello-Jekyll/" rel="alternate" type="text/html" title="Hello Jekyll: Build Personal Webpage With GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+08:00</published><updated>2019-02-11T00:00:00+08:00</updated><id>http://localhost:4000/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/Hello-Jekyll/">&lt;hr /&gt;
+&lt;h6 id=&quot;el15ande-圣安德鲁斯&quot;&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: Software Engineering</summary></entry><entry><title type="html">Hello Jekyll: Build Personal Webpage With GithubPage &amp;amp; Jekyll</title><link href="http://localhost:4000/Hello-Jekyll/" rel="alternate" type="text/html" title="Hello Jekyll: Build Personal Webpage With GithubPage &amp; Jekyll" /><published>2019-02-11T00:00:00+08:00</published><updated>2019-02-11T00:00:00+08:00</updated><id>http://localhost:4000/Hello-Jekyll</id><content type="html" xml:base="http://localhost:4000/Hello-Jekyll/">&lt;hr /&gt;
 
-&lt;h6&gt;Keyword: Web Project Deployment / GithubPage / Jekyll&lt;/h6&gt;
+&lt;h6 id=&quot;keyword-web-project-deployment--githubpage--jekyll&quot;&gt;&lt;em&gt;Keyword: Web Project Deployment / GithubPage / Jekyll&lt;/em&gt;&lt;/h6&gt;
 
 &lt;h2 id=&quot;intro-when-i-really-want-to-write-some-blogs&quot;&gt;Intro: when I really want to write some blogs…&lt;/h2&gt;
 
@@ -215,11 +213,10 @@ What I have created is just a simple default-style Jekyll repository. There are 
 
 &lt;p&gt;It is awesome to learn a new way of blogging &amp;amp; hosting the personal webpage, and of cource, it is a good habit for programmers to update their blogs in a period of time. I will try to write down 4-5 blogs per month in both English &amp;amp; Chinese (even in simple German for practice), this is really practical to improve my English writing &amp;amp; programming skills. The topics will cover CompSci(mostly), English writing &amp;amp; German studying experience(sometimes) and some daily blogs(rarely). I would be happy if someone comments or criticises my blogs (I promise this function will be deployed xd).&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;el15ande-st-andrews&quot;&gt;&lt;em&gt;El15ande, St Andrews&lt;/em&gt;&lt;/h6&gt;
 &lt;hr /&gt;
 
-&lt;h6&gt;关键词: 网站部署 / GithubPage / Jekyll&lt;/h6&gt;
+&lt;h6 id=&quot;关键词-网站部署--githubpage--jekyll&quot;&gt;&lt;em&gt;关键词: 网站部署 / GithubPage / Jekyll&lt;/em&gt;&lt;/h6&gt;
 
 &lt;h2 id=&quot;intro-如果我想写博客&quot;&gt;Intro: 如果我想写博客…&lt;/h2&gt;
 
@@ -243,4 +240,4 @@ Jekyll是基于Ruby语言开发的静态网页生成器, 使用者需要先安�
 
 &lt;p&gt;现在我的计划是一个月记录4-5篇BLOG, 主题包括开发经历, 英语写作及德语学习经历, 可能会试着用双语写作. 更多功能”&lt;strong&gt;即将上线xd&lt;/strong&gt;”.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Keyword: Web Project Deployment / GithubPage / Jekyll</summary></entry></feed>
+&lt;h6 id=&quot;el15ande-圣安德鲁斯&quot;&gt;&lt;em&gt;El15ande, 圣安德鲁斯&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: Web Project Deployment / GithubPage / Jekyll</summary></entry></feed>
