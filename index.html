@@ -10,7 +10,7 @@ layout: default
 
   {% for i in (0..1) %}
     <article class="post">
-      <p>{{ i }}. <a href="{{ site.baseurl }}{{ site.posts[i].url }}">{{ site.posts[i].title }}</a></p>
+      <p>{{ i|plus:1 }}. <a href="{{ site.baseurl }}{{ site.posts[i].url }}">{{ site.posts[i].title }}</a></p>
     </article>
   {% endfor %}
   
