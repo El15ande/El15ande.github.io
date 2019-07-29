@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-26T17:53:53+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-07-29T11:06:10+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">El15ande (Allen Wang)</title><subtitle>Penultimate student @ University of St Andrews</subtitle><entry><title type="html">JavaScript Variables Mysteries: Hoisting &amp;amp; Temporal Dead Zone</title><link href="http://localhost:4000/JS-Variable-Mysteries/" rel="alternate" type="text/html" title="JavaScript Variables Mysteries: Hoisting &amp; Temporal Dead Zone" /><published>2019-07-24T00:00:00+08:00</published><updated>2019-07-24T00:00:00+08:00</updated><id>http://localhost:4000/JS-Variable-Mysteries</id><content type="html" xml:base="http://localhost:4000/JS-Variable-Mysteries/">&lt;hr /&gt;
 
 &lt;h6 id=&quot;keyword-es6-javascript-hoisting-temporal-dead-zone&quot;&gt;&lt;em&gt;Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone&lt;/em&gt;&lt;/h6&gt;
 
@@ -119,28 +119,28 @@ In this blog I would like to share how hoisting works in JavaScript &amp;amp; wh
     let foo5;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;this indicates that _&lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;_&lt;u&gt;variables are not hoisted&lt;/u&gt;. In fact, &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variables are in Temporal Dead Zone (TDZ) &lt;u&gt;from the start of the block until the initialisation is processed&lt;/u&gt;. Variables in TDZ will always throw &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt; as it is an uninitialised state, even using &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;if(true) { //TDZ starts
-    // Using typeof on an undeclared variable results in undefined
-    console.log(typeof x); // -&amp;gt; undefined
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    if(true) { //TDZ starts
+        // Using typeof on an undeclared variable results in undefined
+        console.log(typeof x); // -&amp;gt; undefined
 
-    ... // TDZ continues
-    console.log(foo); // Uncaught ReferenceError
+        ... // TDZ continues
+        console.log(foo); // Uncaught ReferenceError
 
-    // Using typeof on variables in TDZ results in UncaughtError
-    console.log(typeof foo);// Uncaught ReferenceError
-    
-    let foo = 'bar'; // Varible initialised, TDZ ends
-}
+        // Using typeof on variables in TDZ results in UncaughtError
+        console.log(typeof foo);// Uncaught ReferenceError
+        
+        let foo = 'bar'; // Varible initialised, TDZ ends
+    }
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Due to the existance of TDZ, variables used before initialisation are going to throw &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;s, this motivates new JavaScript programmers to follow the ‘declare-initialise-use’ flow to create &amp;amp; use variables (which produces more modular &amp;amp; cleaner code).&lt;/p&gt;
 
-&lt;p&gt;I would highly recommand new JavaScript programmers to try codes in editors and try to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly and stop here to grab a cup of coffee because the rest contents will focus on JavaScript lexical environment. However if you are curious about the mechanism of &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;, or you have been working on JavaScript for a long time, please proceed.&lt;/p&gt;
+&lt;p&gt;I would highly recommand new JavaScript programmers to type these codes in editors in order to understand how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; properly, and stop here to grab a cup of coffee because the rest contents will focus on JavaScript lexical environment. However if you are curious about the mechanism of &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;, or you have been working on JavaScript for a long time, please proceed.&lt;/p&gt;
 
 &lt;p&gt;Reference:&lt;br /&gt;
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone&quot;&gt;MDN developer guide: TDZ&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;tdz-towards-hoisting-not-ok--&quot;&gt;TDZ towards hoisting (not OK :( )&lt;/h2&gt;
+&lt;h2 id=&quot;tdz-towards-hoisting-a-bit-hard--&quot;&gt;TDZ towards hoisting (a bit hard :( )&lt;/h2&gt;
 
 &lt;p&gt;Starting from TDZ, the statement of &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variables do not hoist is acutally an over-simplified summary: &lt;u&gt;these variables hoist but throw errors when used before initialised, rather than return &lt;/u&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;_, consider the following code:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    let x = 'foo';
@@ -149,7 +149,7 @@ In this blog I would like to share how hoisting works in JavaScript &amp;amp; wh
         let x = 'foobar';
     }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;On execution, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; inside the block is hoisted as the first statement in the block, this produces TDZ and the console statement in TDZ generates &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt; which seems reasonable. In fact, ES6 standard explained in &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations&quot;&gt;13.3.1&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;On execution, &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; inside the block is hoisted as the first statement in the block, this produces TDZ and the console statement in TDZ generates &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt; which seems reasonable. As ES6 standard explained in &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations&quot;&gt;13.3.1&lt;/a&gt;:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; declarations define variables that are scoped to &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts&quot;&gt;the running execution context&lt;/a&gt;’s &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts&quot;&gt;LexicalEnvironment&lt;/a&gt;.&lt;/p&gt;
@@ -172,20 +172,110 @@ In this blog I would like to share how hoisting works in JavaScript &amp;amp; wh
 &lt;/blockquote&gt;
 
 &lt;p&gt;These declarations are not related to TDZ but referencing the basic properties of JavaScript variables: if a variable is assigned a value, the value will be usable only after the assignment (not after created, like &lt;code class=&quot;highlighter-rouge&quot;&gt;foo1&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;foo3&lt;/code&gt; above), if a variable is not assigned any values, the default value will be &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; (after exiting TDZ, the variables work in the same way):&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;if(true) {
-    // TDZ
-    let x; // TDZ ends
-    // The above equals to `let x = undefined`
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    if(true) {
+        // TDZ
+        let x; // TDZ ends
+        // The above equals to `let x = undefined`
 
-    console.log(x); // -&amp;gt; undefined
-}
+        console.log(x); // -&amp;gt; undefined
+    }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;TBC…&lt;/p&gt;
+&lt;p&gt;Reference:&lt;br /&gt;
+&lt;a href=&quot;http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified&quot;&gt;JS Rocks blog: TDZ demystified&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://segmentfault.com/a/1190000008213835&quot;&gt;Segmentfault blog: understanding ES6 TDZ (Chinese)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;function-tdz-default-parameters-harder--&quot;&gt;Function TDZ: default parameters (harder &amp;gt;:( )&lt;/h2&gt;
+
+&lt;p&gt;TDZ mechanism appears in a lot of scenarios, one application is the default parameters of a function. Consider this function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    function add(x = y, y = 0) {
+        return x+y;
+    }
+
+    add(1,2) // -&amp;gt; 3
+
+    //This equals to add(1, undefined)
+    add(1) // -&amp;gt; 1
+
+    add(undefined, 1) // Uncaught ReferenceError
+    add() // Uncaught ReferenceError
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The default parameters &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; are evaluated from left to right at the running stage, so &lt;code class=&quot;highlighter-rouge&quot;&gt;y&lt;/code&gt; is in TDZ when &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; is evaluated which causes a &lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;. Please be aware that TDZ violations will not be reported by the compiler, but it will throw the error when &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt; is passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt;, the similar scenatio is the IIFE version of this function:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    (function(x = y, y = 0) {
+        return x+y;
+    }(1,2)); // -&amp;gt; 3
+
+    (function(x = y, y = 0) {
+        return x+y;
+    }(undefined, 1)); // Uncaught ReferenceError
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Furthermore, the &lt;code class=&quot;highlighter-rouge&quot;&gt;let x = x&lt;/code&gt; situation also causes the TDZ violation:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    function cube(x = x) {
+        return x*x*x;
+    }
+
+    cube(2); // -&amp;gt; 8
+    cube(); // Uncaught ReferenceError
+
+    //...or the IIFE version
+    (function(x = x) {
+        return x*x*x;
+    }(2)) // -&amp;gt; 8
+
+    (function(x = x) {
+        return x*x*x;
+    }()) // -&amp;gt; Uncaught ReferenceError
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An interesting scenario is, what if the default parameter is given at the outside of the scope by the &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; variable? The answer is that it also causes the TDZ violation as &lt;u&gt;default parameters are evaluated in an intermediate scope&lt;/u&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;    let foo = 42;
+
+    (function(x = foo, foo) {
+        return x+foo;
+    }(1,2)); // -&amp;gt; 3
+
+    (function(x = foo, foo) {
+        //foo is undefined is this scope;
+        return x+foo;
+    }(1)); // -&amp;gt; NaN
+
+    (function(x = foo, foo) {
+        return x+foo;
+    }()); // Uncaught ReferenceError
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In conclusion, I suggest &lt;u&gt;not to bind variables as the default parameters&lt;/u&gt; and &lt;u&gt;be careful of the variable scope where TDZ might exist&lt;/u&gt;. Also, Javascript classes (&lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;) will also produce TDZ, if you are interested in this topic, please proceed to &lt;a href=&quot;http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified&quot;&gt;this article&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;introspection-ah-finally&quot;&gt;Introspection (ah finally)&lt;/h2&gt;
+
+&lt;p&gt;The variables scopes &amp;amp; TDZ mechanism can be both helpful (providing error feedback when mixing scope) and dangerous (in cases of running stage errors), this enforces us to declare the global variables and scopes with more considerations and awareness. I was mixing &lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;s and &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;s before I totally understand the scopes in JavaScript, and I would like to be more considerate of the scopes in order to write more modular and cleaner code.&lt;/p&gt;
+
+&lt;p&gt;This is a simplified translation of the Chinese version below, if you have any suggestions, questions or found any bugs/grammar mistakes about this blog, please email me and I am happy to answer (or fix this blog :) )&lt;/p&gt;
+
+&lt;p&gt;Suggested further readings:&lt;br /&gt;
+&lt;a href=&quot;https://zhuanlan.zhihu.com/p/28140450&quot;&gt;Zhihu: understand &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; in 2 months (Chinese)&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://dmitrysoshnikov.com/ecmascript/es6-notes-default-values-of-parameters&quot;&gt;Note 6. ES6: default values of parameters&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/&quot;&gt;JavaScript variable lifecycle: why let is not hoisted&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h6 id=&quot;关键词-es6-javascript变量提升-暂存死区tdz&quot;&gt;&lt;em&gt;关键词: ES6, JavaScript变量提升, 暂存死区(TDZ)&lt;/em&gt;&lt;/h6&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
+&lt;h6 id=&quot;关键词-es6-javascript变量提升-暂存死区tdz&quot;&gt;&lt;em&gt;关键词: ES6, JavaScript变量提升, 暂存死区(TDZ)&lt;/em&gt;&lt;/h6&gt;
+
+&lt;h2 id=&quot;重启博客&quot;&gt;重启博客…&lt;/h2&gt;
+
+&lt;p&gt;由于最近的工作接触了一些SaaS前端的问题(主要是JS和框架的开发和bug修复), 在修复了一些由于变量提升(hoisting)和变量域(scope)的bug之后, 我对JS中&lt;code class=&quot;highlighter-rouge&quot;&gt;var&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt;的使用产生了疑惑: 如何确定变量的作用域? / 应该如何使用变量以确保最模块化(modular)的JS代码? / 如何最大限度的避免&lt;code class=&quot;highlighter-rouge&quot;&gt;ReferenceError&lt;/code&gt;和引用&lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;? 以下的内容中将分享一些我对于JS变量的理解.&lt;/p&gt;
+
+&lt;h2 id=&quot;js常量变量基础&quot;&gt;JS常量变量基础&lt;/h2&gt;
+
+&lt;h2 id=&quot;暂存死区-tdz&quot;&gt;暂存死区 (TDZ)&lt;/h2&gt;
+
+&lt;h2 id=&quot;tdz与hoisting&quot;&gt;TDZ与Hoisting&lt;/h2&gt;
+
+&lt;h2 id=&quot;函数tdz-默认参数&quot;&gt;函数TDZ: 默认参数&lt;/h2&gt;
+
+&lt;h2 id=&quot;反思与总结&quot;&gt;反思与总结&lt;/h2&gt;</content><author><name></name></author><summary type="html">Keyword: ES6, JavaScript Hoisting, Temporal Dead Zone</summary></entry><entry><title type="html">Software Engineering In A Nutshell: FAQ &amp;amp; Answers From Ian Sommerville</title><link href="http://localhost:4000/Software-Engineering-FAQ/" rel="alternate" type="text/html" title="Software Engineering In A Nutshell: FAQ &amp; Answers From Ian Sommerville" /><published>2019-04-09T00:00:00+08:00</published><updated>2019-04-09T00:00:00+08:00</updated><id>http://localhost:4000/Software-Engineering-FAQ</id><content type="html" xml:base="http://localhost:4000/Software-Engineering-FAQ/">&lt;hr /&gt;
 
 &lt;h6 id=&quot;keyword-software-engineering&quot;&gt;&lt;em&gt;Keyword: Software Engineering&lt;/em&gt;&lt;/h6&gt;
 

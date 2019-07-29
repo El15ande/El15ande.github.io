@@ -128,28 +128,28 @@ We can simply understand the code: `foo1` is used before initialisation and thus
 ```
 this indicates that _`let`\_<u>variables are not hoisted</u>. In fact, `let` variables are in Temporal Dead Zone (TDZ) <u>from the start of the block until the initialisation is processed</u>. Variables in TDZ will always throw `ReferenceError` as it is an uninitialised state, even using `typeof`:
 ```Javascript
-if(true) { //TDZ starts
-    // Using typeof on an undeclared variable results in undefined
-    console.log(typeof x); // -> undefined
+    if(true) { //TDZ starts
+        // Using typeof on an undeclared variable results in undefined
+        console.log(typeof x); // -> undefined
 
-    ... // TDZ continues
-    console.log(foo); // Uncaught ReferenceError
+        ... // TDZ continues
+        console.log(foo); // Uncaught ReferenceError
 
-    // Using typeof on variables in TDZ results in UncaughtError
-    console.log(typeof foo);// Uncaught ReferenceError
-    
-    let foo = 'bar'; // Varible initialised, TDZ ends
-}
+        // Using typeof on variables in TDZ results in UncaughtError
+        console.log(typeof foo);// Uncaught ReferenceError
+        
+        let foo = 'bar'; // Varible initialised, TDZ ends
+    }
 ```
 
 Due to the existance of TDZ, variables used before initialisation are going to throw `ReferenceError`s, this motivates new JavaScript programmers to follow the 'declare-initialise-use' flow to create & use variables (which produces more modular & cleaner code).
 
-I would highly recommand new JavaScript programmers to try codes in editors and try to understand how to use `var` & `let` properly and stop here to grab a cup of coffee because the rest contents will focus on JavaScript lexical environment. However if you are curious about the mechanism of `let`, or you have been working on JavaScript for a long time, please proceed.
+I would highly recommand new JavaScript programmers to type these codes in editors in order to understand how to use `var` & `let` properly, and stop here to grab a cup of coffee because the rest contents will focus on JavaScript lexical environment. However if you are curious about the mechanism of `let`, or you have been working on JavaScript for a long time, please proceed.
 
 Reference:  
 [MDN developer guide: TDZ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone)
 
-## TDZ towards hoisting (not OK :( )
+## TDZ towards hoisting (a bit hard :( )
 
 Starting from TDZ, the statement of `let` variables do not hoist is acutally an over-simplified summary: <u>these variables hoist but throw errors when used before initialised, rather than return </u>`undefined`_, consider the following code:
 ```Javascript
@@ -159,7 +159,7 @@ Starting from TDZ, the statement of `let` variables do not hoist is acutally an 
         let x = 'foobar';
     }
 ```
-On execution, `x` inside the block is hoisted as the first statement in the block, this produces TDZ and the console statement in TDZ generates `ReferenceError` which seems reasonable. In fact, ES6 standard explained in [13.3.1](http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations):  
+On execution, `x` inside the block is hoisted as the first statement in the block, this produces TDZ and the console statement in TDZ generates `ReferenceError` which seems reasonable. As ES6 standard explained in [13.3.1](http://www.ecma-international.org/ecma-262/6.0/#sec-let-and-const-declarations):  
 
 > `let` and `const` declarations define variables that are scoped to [the running execution context](http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts)’s [LexicalEnvironment](http://www.ecma-international.org/ecma-262/6.0/#sec-execution-contexts).  
 
@@ -175,16 +175,110 @@ This proves that `const/let` variables do hoist at the moment of their scope is 
 
 These declarations are not related to TDZ but referencing the basic properties of JavaScript variables: if a variable is assigned a value, the value will be usable only after the assignment (not after created, like `foo1` or `foo3` above), if a variable is not assigned any values, the default value will be `undefined` (after exiting TDZ, the variables work in the same way):
 ```Javascript
-if(true) {
-    // TDZ
-    let x; // TDZ ends
-    // The above equals to `let x = undefined`
+    if(true) {
+        // TDZ
+        let x; // TDZ ends
+        // The above equals to `let x = undefined`
 
-    console.log(x); // -> undefined
-}
+        console.log(x); // -> undefined
+    }
 ```
 
-TBC...
+Reference:  
+[JS Rocks blog: TDZ demystified](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified)  
+[Segmentfault blog: understanding ES6 TDZ (Chinese)](https://segmentfault.com/a/1190000008213835)
+
+## Function TDZ: default parameters (harder >:( )
+
+TDZ mechanism appears in a lot of scenarios, one application is the default parameters of a function. Consider this function:
+```Javascript
+    function add(x = y, y = 0) {
+        return x+y;
+    }
+
+    add(1,2) // -> 3
+
+    //This equals to add(1, undefined)
+    add(1) // -> 1
+
+    add(undefined, 1) // Uncaught ReferenceError
+    add() // Uncaught ReferenceError
+```
+
+The default parameters `x` & `y` are evaluated from left to right at the running stage, so `y` is in TDZ when `x` is evaluated which causes a `ReferenceError`. Please be aware that TDZ violations will not be reported by the compiler, but it will throw the error when `undefined` is passed to `x`, the similar scenatio is the IIFE version of this function:
+```Javascript
+    (function(x = y, y = 0) {
+        return x+y;
+    }(1,2)); // -> 3
+
+    (function(x = y, y = 0) {
+        return x+y;
+    }(undefined, 1)); // Uncaught ReferenceError
+```
+
+Furthermore, the `let x = x` situation also causes the TDZ violation:
+```Javascript
+    function cube(x = x) {
+        return x*x*x;
+    }
+
+    cube(2); // -> 8
+    cube(); // Uncaught ReferenceError
+
+    //...or the IIFE version
+    (function(x = x) {
+        return x*x*x;
+    }(2)) // -> 8
+
+    (function(x = x) {
+        return x*x*x;
+    }()) // -> Uncaught ReferenceError
+```
+
+An interesting scenario is, what if the default parameter is given at the outside of the scope by the `let` variable? The answer is that it also causes the TDZ violation as <u>default parameters are evaluated in an intermediate scope</u>:
+```Javascript
+    let foo = 42;
+
+    (function(x = foo, foo) {
+        return x+foo;
+    }(1,2)); // -> 3
+
+    (function(x = foo, foo) {
+        //foo is undefined is this scope;
+        return x+foo;
+    }(1)); // -> NaN
+
+    (function(x = foo, foo) {
+        return x+foo;
+    }()); // Uncaught ReferenceError
+```
+
+In conclusion, I suggest <u>not to bind variables as the default parameters</u> and <u>be careful of the variable scope where TDZ might exist</u>. Also, Javascript classes (`class`) will also produce TDZ, if you are interested in this topic, please proceed to [this article](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified).
+
+## Introspection (ah finally)
+
+The variables scopes & TDZ mechanism can be both helpful (providing error feedback when mixing scope) and dangerous (in cases of running stage errors), this enforces us to declare the global variables and scopes with more considerations and awareness. I was mixing `var`s and `let`s before I totally understand the scopes in JavaScript, and I would like to be more considerate of the scopes in order to write more modular and cleaner code.
+
+This is a simplified translation of the Chinese version below, if you have any suggestions, questions or found any bugs/grammar mistakes about this blog, please email me and I am happy to answer (or fix this blog :) )
+
+Suggested further readings:  
+[Zhihu: understand `let` in 2 months (Chinese)](https://zhuanlan.zhihu.com/p/28140450)  
+[Note 6. ES6: default values of parameters](http://dmitrysoshnikov.com/ecmascript/es6-notes-default-values-of-parameters)  
+[JavaScript variable lifecycle: why let is not hoisted](https://dmitripavlutin.com/variables-lifecycle-and-why-let-is-not-hoisted/)
 
 <hr>
 ###### _关键词: ES6, JavaScript变量提升, 暂存死区(TDZ)_
+
+## 重启博客...
+
+由于最近的工作接触了一些SaaS前端的问题(主要是JS和框架的开发和bug修复), 在修复了一些由于变量提升(hoisting)和变量域(scope)的bug之后, 我对JS中`var`, `let`和`const`的使用产生了疑惑: 如何确定变量的作用域? / 应该如何使用变量以确保最模块化(modular)的JS代码? / 如何最大限度的避免`ReferenceError`和引用`undefined`? 以下的内容中将分享一些我对于JS变量的理解.
+
+## JS常量变量基础
+
+## 暂存死区 (TDZ)
+
+## TDZ与Hoisting
+
+## 函数TDZ: 默认参数
+
+## 反思与总结
