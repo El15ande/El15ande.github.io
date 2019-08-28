@@ -3,12 +3,12 @@ layout: default
 ---
 <div id="intro">
   <h1 style="text-align:center;">Welcome!</h1>
-  <p>Browse 'Blogs' to check my past blogs</p>
-  <p>Browse 'About' to check out my information</p>
+  <p>'Blogs' to check my past blogs</p>
+  <p>'About' to check out my information</p>
 
   <h2 style="text-align:center;">My latest blog</h2>
 
-  {% for i in (0..1) %}
+  {% for i in (0..2) %}
     <article class="post">
       <p>{{ i|plus:1 }}. <a href="{{ site.baseurl }}{{ site.posts[i].url }}">{{ site.posts[i].title }}</a></p>
     </article>
