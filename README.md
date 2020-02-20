@@ -6,7 +6,9 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 
 1. [Hello Jekyll: Build Personal Webpage With GithubPage & Jekyll](https://el15ande.github.io/Hello-Jekyll/) - 11/02/2019
 2. [Software Engineering In A Nutshell: FAQ & Answers From Ian Sommerville](https://el15ande.github.io/Software-Engineering-FAQ/) - 09/04/2019
-3. [JavaScript Variables Declaration Mysteries: Variable Hoisting & Temporal Dead Zone](http://localhost:4000/JS-Variable-Declaration-Mysteries/) - 24/07/2019
+3. [JavaScript Variables Declaration Mysteries: Variable Hoisting & Temporal Dead Zone](https://el15ande.github.io/JS-Variable-Mysteries/) - 24/07/2019
+4. [Software Architecture Study \[1\]: Overview & Design Decisions](https://el15ande.github.io/SA-Study-1/) - 28/11/2019
+5. [Software Architecture Study \[2\]: Styles](https://el15ande.github.io/SA-Study-2/) - 06/01/2020
 
 ## Development
 
