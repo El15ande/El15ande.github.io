@@ -16,5 +16,5 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 
 ## <center>My projects</center>
 
-[Github Page](https://github.com/El15ande/El15ande.github.io)
-[Senior Honours Project](https://github.com/El15ande/CS4099_SHProject/)
+[Github Page](https://github.com/El15ande/El15ande.github.io)  
+[Senior Honours Project](https://github.com/El15ande/CS4099_SHProject/)  
