@@ -5,7 +5,7 @@ permalink: /about/
 
 # <center>About me</center>
 
-I am a penultimate postgraduate student in [University of St Andrews](http://www.st-andrews.ac.uk/), this is my GithubPage for blogs & past projects.  
+I am a final year postgraduate student in [University of St Andrews](http://www.st-andrews.ac.uk/), this is my GithubPage for blogs & past projects.  
 
 This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](https://jekyllrb.com/), framework cloned from [Jekyll-now](https://github.com/barryclark/jekyll-now).
 
@@ -17,3 +17,4 @@ This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](http
 ## <center>My projects</center>
 
 [Github Page](https://github.com/El15ande/El15ande.github.io)
+[Senior Honours Project](https://github.com/El15ande/CS4099_SHProject/)
