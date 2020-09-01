@@ -209,13 +209,13 @@ Furthermore, the `let x = x` situation also causes the TDZ violation:
     cube(2);    // 8
     cube(); //  Uncaught ReferenceError
 
-    //...or the IIFE version
+    //  ...or the IIFE version
     (function(x = x) {
         return x * x * x;
     }(2));  //    8
 
     (function(x = x) {
-        return x*x*x;
+        return x * x * x;
     }());   //  Uncaught ReferenceError
 ```
 
@@ -230,15 +230,15 @@ An interesting scenario is that: what if the default parameter is given at the o
 
     (function(x = foo, foo) {
         //  foo is undefined is this scope;
-        return x+foo;
+        return x + foo;
     }(1));  //   NaN
 
     (function(x = foo, foo) {
-        return x+foo;
+        return x + foo;
     }());   //    Uncaught ReferenceError
 ```
 
-My personal suggestion is <u>not to bind variables as the default parameters</u> and <u>be careful of the variable scope where TDZ might exist</u>. Also, JS classes (`class`) will also produce TDZ, if you are interested in this topic, please proceed to [this article](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified).
+My personal suggestion is <u>not to bind variables as the default parameters</u> and <u>be careful of the variable scope where TDZ might exist</u>. Also, JS classes will also produce TDZ, if you are interested in this topic, please proceed to [this article](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified).
 
 ## Reference & Related Readings
 
