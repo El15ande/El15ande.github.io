@@ -18,11 +18,11 @@ This is an updated blog based on my last year's article which briefly discusses 
     let y = 'bar';
 ```
 
-Although `x` and `y` are (and should never be) used before they are declared and assigned, the difference between two declarations draws my attention. In this blog, I would like to re-share my understanding about JavaScript variables.
+Although `x` and `y` are (and should never be) used before they are declared and assigned, the difference between two declarations draws my attention. In this blog, I would like to re-share my understanding about JS variables.
 
 ## Variable Basis
 
-It has been 5 years since ECMAScript 2015 (better known as ES6) introduces the concept of <u>block-scoped</u> declaration `let`. Although ES6 haven't been seen as a JS programming essential, it is encouraged that different types of constants, variables and functions should be separated in order to [improve the code readability](https://github.com/airbnb/javascript#variables).
+It has been 5 years since ECMAScript 2015 (better known as ES6) introduces the concept of block-scoped declaration `let`. Although ES6 haven't been seen as a JS programming essential, it is still encouraged that different types of constants, variables and functions should be separated in order to improve the code [readability](https://github.com/airbnb/javascript#variables).
 
 Firstly, there are 3 ways to directly declare a variable in JS:
 
@@ -42,7 +42,7 @@ Firstly, there are 3 ways to directly declare a variable in JS:
 
 2. `var foo = 'bar';`
 
-    The scope of a `var` variable depends on its <u>current execution context</u>, which could be function-scoped if it is inside a function or global-scoped otherwise. It is also noticeable that assigning a value to an undeclared variable implicitly creates it as a global variable, so at least one of `const`, `var` or `let` should be used when declaring a variable.
+    The scope of a `var` variable depends on its current execution context, which could be function-scoped if it is inside a function or global-scoped otherwise. It is also noticeable that assigning a value to an undeclared variable implicitly creates it as a global variable, so at least one of `const`, `var` or `let` should be used when declaring a variable.
 
 3. `let foo = 'bar';`
 
@@ -53,7 +53,7 @@ Firstly, there are 3 ways to directly declare a variable in JS:
             //  Function scope starts
             let foo = 'bar';
             console.log(foo);   //  bar
-            if (1) {    //  If-statement scope starts
+            if (true) {    //  If-statement scope starts
                 let foo = 'baz';
                 console.log(foo);   //  baz
             }   //  If-statement scope ends
@@ -61,7 +61,7 @@ Firstly, there are 3 ways to directly declare a variable in JS:
         }   //  Function scope ends
     ```
 
-Besides, a significat difference between JS and other language is <u>variable hoisting</u>. <u>Variable and function declarations are physically moved to the top of JS code</u>. As a result, the following code blocks are equal:
+Besides, a significat difference between JS and other language is variable hoisting. Variable and function declarations are physically moved to the top of JS code. As a result, the following code blocks are equal:
 
 ```JavaScript
     //  This block...
@@ -75,7 +75,7 @@ Besides, a significat difference between JS and other language is <u>variable ho
     console.log(foo);   //  'bar'
 ```
 
-The hoisting mechanism may confuse many new JS programmers at the beginning as it does not follow the 'declare-initialise-use' flow in other languages. In fact, <u>JS put all variables & function declarations into the memory at the compilation stage, but does not change the code sequence (initialisation sequence)</u>. Thus, using a variable before it is initialised is still invalid:
+The hoisting mechanism may confuse many new JS programmers at the beginning as it does not follow the 'declare-initialise-use' flow in other languages. In fact, JS put all variables & function declarations into the memory at the compilation stage, but does not change the code sequence (initialisation sequence). Thus, using a variable before it is initialised is still invalid:
 
 ```JavaScript
     console.log(foo);   //  undefined
@@ -103,7 +103,7 @@ Consider the following code in the global scope:
     foo4 = 'bazz';
 ```
 
-`foo1` is used before initialisation and thus should be `undefined` when it is logged. `foo2` is typical example of variable hoisting. On the other hand, `foo3` and `foo4` declare variables through `let` and they throw `ReferenceError`. <u>`let` variables are not initialised until their definition is evaluated</u>. Furthermore, consider `foo5` below:
+`foo1` is used before initialisation and thus should be `undefined` when it is logged. `foo2` is typical example of variable hoisting. On the other hand, `foo3` and `foo4` declare variables through `let` and they throw `ReferenceError`. `let` variables are not initialised until their definition is evaluated. Furthermore, consider `foo5` below:
 
 ```Javascript
     foo5 = 'foobar';
@@ -111,7 +111,7 @@ Consider the following code in the global scope:
     let foo5;
 ```
 
-The same `ReferenceError` indicates that <u>`let` variables are not hoisted</u>. When declaring a `let` variable, the zone between <u>the start of the block and the initialisation is processed</u> is called Temporal Dead Zone (TDZ). Variables in TDZ will always throw `ReferenceError` since it is in an uninitialised (aka temporal dead)
+The same `ReferenceError` indicates that `let` variables are not hoisted. When declaring a `let` variable, the zone between the start of the block and the initialisation is processed is called Temporal Dead Zone (TDZ). Variables in TDZ will always throw `ReferenceError` since it is in an uninitialised (aka temporal dead)
 state. Furthermore, the existence of TDZ means that using `typeof` is not 100% safe anymore:
 
 ```JavaScript
@@ -133,7 +133,7 @@ Due to the existance of TDZ, variables used before initialisation are going to t
 
 ## TDZ & Hoisting
 
-The statement of `let` variables do not hoist is acutally an over-simplified summary: <u>these `let` variables do hoist themselves but throw errors when used before initialised, rather than return `undefined`</u>:
+The statement of `let` variables do not hoist is acutally an over-simplified summary: these `let` variables do hoist themselves but throw errors when used before initialised, rather than return `undefined`:
 
 ```Javascript
     let x = 'foo';
@@ -219,7 +219,7 @@ Furthermore, the `let x = x` situation also causes the TDZ violation:
     }());   //  Uncaught ReferenceError
 ```
 
-An interesting scenario is that: what if the default parameter is given at the outside of the scope by the `let` variable? The answer is that it also causes the TDZ violation as <u>default parameters are evaluated in an intermediate scope</u>:
+An interesting scenario is that: what if the default parameter is given at the outside of the scope by the `let` variable? The answer is that it also causes the TDZ violation as default parameters are evaluated in an intermediate scope:
 
 ```Javascript
     let foo = 42;
@@ -238,7 +238,7 @@ An interesting scenario is that: what if the default parameter is given at the o
     }());   //    Uncaught ReferenceError
 ```
 
-My personal suggestion is <u>not to bind variables as the default parameters</u> and <u>be careful of the variable scope where TDZ might exist</u>. Also, JS classes will also produce TDZ, if you are interested in this topic, please proceed to [this article](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified).
+My personal suggestion is not to bind variables as the default parameters and be careful of the variable scope where TDZ might exist. Also, JS classes will also produce TDZ, if you are interested in this topic, please proceed to [this article](http://jsrocks.org/2015/01/temporal-dead-zone-tdz-demystified).
 
 ## Reference & Related Readings
 
