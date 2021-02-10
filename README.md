@@ -1,4 +1,6 @@
-# [El15ande.github.io](https://el15ande.github.io/)
+# El15ande.github.io
+
+A simple personal Github Pages blog.
 
 ## Blogs
 
@@ -6,4 +8,5 @@
 
 ## Technology Stack
 
-This page is served by [Github Pages](https://pages.github.com/) & [Jekyll](https://jekyllrb.com/). The framework is cloned from [Jekyll-now](https://github.com/barryclark/jekyll-now).
+- [Github Pages](https://pages.github.com/)
+- [Jekyll](https://jekyllrb.com/), [Jekyll-now](https://github.com/barryclark/jekyll-now)
