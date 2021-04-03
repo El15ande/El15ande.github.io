@@ -3,26 +3,13 @@ layout: default
 ---
 <div id="intro">
   <h1 style="text-align:center;">Welcome to my Github Page!</h1>
+  <p>Click 'Blogs' to browse more blogs. (I have temporarily archived all my past blogs, they will be back in later updates)</p>
+  <p>Click 'AboutMe' to browse my information.</p>
 
-  <h1 style="text-align:center;">Latest blogs</h1>
-
+  <h1 style="text-align:center;">Latest Blogs</h1>
   {% for i in (0..2) %}
     <article class="post">
       <p>{{ i|plus:1 }}. <a href="{{ site.baseurl }}{{ site.posts[i].url }}">{{ site.posts[i].title }}</a></p>
     </article>
   {% endfor %}
-  
-
 </div>
-
-<!-- <div id="recent_blogs" class="posts">
-  <h2 style="text-align: center">Recent blogs</h2>
-
-  {% for i in (0..0) %}
-    <article class="post">
-      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ site.posts[i].title }}</a></h2>
-      <div style="text-align: center" class="entry">{{ site.posts[i].excerpt }}</div>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div> -->
