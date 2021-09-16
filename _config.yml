@@ -1,11 +1,11 @@
-name: El15ande (Yuxuan Wang)
-description: Final year student @ University of St Andrews
+name: El15ande (Allen)
+description:
 avatar: ./images/avatar.jpg
 
 # Flags below are optional
 # Includes an icon in the footer for each username you enter
 footer-links:
-  email: yw69@st-andrews.ac.uk
+  email: 1140076527@qq.com
   github: El15ande
   linkedin: https://www.linkedin.com/in/yuxuan-wang-984782151/
   twitter:
@@ -58,3 +58,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - readme.md
+
+include:
+  - project.yml

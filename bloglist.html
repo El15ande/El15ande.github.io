@@ -2,15 +2,18 @@
 layout: page
 permalink: /bloglist/
 ---
+
+<h1>BLOGS</h1>
+
 <ul id="bloglist">
     {% for post in site.posts %}
-        <li>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <div style="font-size: 75%">
-                {{ post.excerpt }}
-                {{ post.date | date: "%Y-%m-%d" }}
-            </div>
-            <br>
-        </li>
+    <li>
+        <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+        <div class="ldesc">
+            {{post.excerpt}}
+            {{post.date | date: "%Y-%m-%d"}}
+        </div>
+        <br>
+    </li>
     {% endfor %}
 </ul>

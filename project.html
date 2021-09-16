@@ -1,0 +1,19 @@
+---
+layout: page
+permalink: /project/
+---
+
+<h1>PROJECTS</h1>
+
+<ul id="projectlist">
+    {% for project in site.data.projects %}
+    <li>
+        <a href="{{project.link}}">{{project.name}}</a>
+        <div class="ldesc">
+            {{project.description}}<br>
+            State: {{project.state}}
+        </div>
+        <br>
+    </li>
+    {% endfor %}
+</ul>

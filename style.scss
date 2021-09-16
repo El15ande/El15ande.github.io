@@ -31,9 +31,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
   color: $darkerGray;
-  font-weight: bold;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -46,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  text-align: center;
   a {
     color: inherit;
   }
@@ -53,6 +52,8 @@ h1 {
 
 h2 {
   font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
 }
 
 h3 {
@@ -194,7 +195,6 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -213,7 +213,6 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
@@ -288,31 +287,28 @@ footer {
 @import "highlights";
 @import "svg-icons";
 
-//Customised font;
+
+
+/*
+  Customisation
+*/
 body {
   background: #FFFFFF;
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif; 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-//Customised table style;
-table, table th, table tr, table td {
-	border: 1px solid;
-	padding: 5px;
-}
-table th {
-	font-size: 1.5em;
-}
-//Customised blog title style;
-.post h1, .post h2 {
-	text-align: center;
-}
-.post h6, .date {
+#reference {
+  /* Reference @ index */
   text-align: right;
-}
-.post pre {
-  border-left: 2px solid #87ceeb;
-  padding-left: 20px;
-}
-.post blockquote p {
-  font-size: 15px !important;
+  font-size: smaller;
 }
 
+.ldesc {
+  /* List description @ bloglist, project */
+  font-size: smaller;
+  font-style: oblique;
+  color: grey;
+
+  p {
+    margin: 0;
+  }
+}
