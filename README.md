@@ -2,17 +2,12 @@
 
 Simple Github Pages blog.
 
-## Setup
+## Configuration
 
-- Jekyll installation: `gem install bundler jekyll`
-- Build: `jekyll serve`
+- Jekyll dependency set-up: `gem install bundler jekyll`
+- Dev.: `jekyll serve`
 
----
-
-## Technology Stack
-
+**Tech. Stack**
 - [Github Pages](https://pages.github.com/)
 - [Jekyll](https://jekyllrb.com/)
   - [Jekyll-now](https://github.com/barryclark/jekyll-now)
-
----
