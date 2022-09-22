@@ -19,7 +19,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 16px/1.4 $helvetica;
   color: $darkGray;
 }
 
@@ -289,21 +289,21 @@ footer {
 
 
 
-/*
-  Customisation
-*/
+// Customised modifications
+
 body {
   background: #FFFFFF;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+// Reference @ index.
 #reference {
-  /* Reference @ index */
   text-align: right;
   font-size: smaller;
 }
 
+// List description @ bloglist, project.
 .ldesc {
-  /* List description @ bloglist, project */
   font-size: smaller;
   font-style: oblique;
   color: grey;
@@ -311,4 +311,26 @@ body {
   p {
     margin: 0;
   }
+}
+
+.post .entry {
+  // First <p>, TLDR of the blog.
+  p:first-child {
+    text-align: right;
+    color: gray;
+  }
+
+  h4 {
+    text-align: center;
+    font-size: larger;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.post .date {
+  text-align: right;
 }

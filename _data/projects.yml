@@ -1,9 +1,9 @@
 - name: SArchPrime
-  state: InRefactor
+  state: In-Refactor
   link: https://github.com/El15ande/CS4099_SArchPrime
-  description: '2019/0, CS4099 (BSc): Software Architecture Viewpoint - Analysis & Visualisation.'
+  description: 'Software Architecture Viewpoint - Analysis & Visualisation'
 
 - name: TranslPrime
   state: Finished
   link: https://github.com/El15ande/CS5199_TranslPrime
-  description: '2020/1, CS5199 (MSci): An Aid To Learning & Assessing To Read Foreign Language.'
+  description: 'An Aid To Learning & Assessing To Read Foreign Language.'
