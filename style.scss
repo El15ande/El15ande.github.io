@@ -18,9 +18,10 @@ html {
 }
 
 body {
-	background: $white;
-  font: 16px/1.4 $helvetica;
+  background: $lightGray;
   color: $darkGray;
+
+  font: 16px/1.4 $helveticaNeue;
 }
 
 .container {
@@ -289,48 +290,43 @@ footer {
 
 
 
-// Customised modifications
-
-body {
-  background: #FFFFFF;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+// El15ande's modifications
 
 // Reference @ index.
-#reference {
+#index-reference {
   text-align: right;
   font-size: smaller;
 }
 
 // List description @ bloglist, project.
-.ldesc {
+.description {
   font-size: smaller;
   font-style: oblique;
   color: grey;
-
+  
   p {
     margin: 0;
   }
 }
 
-.post .entry {
-  // First <p>, TLDR of the blog.
-  p:first-child {
-    text-align: right;
-    color: gray;
-  }
+// .post .entry {
+//   // First <p>, TLDR of the blog.
+//   p:first-child {
+//     text-align: right;
+//     color: gray;
+//   }
 
-  h4 {
-    text-align: center;
-    font-size: larger;
-    color: black;
-  }
+//   h4 {
+//     text-align: center;
+//     font-size: larger;
+//     color: black;
+//   }
 
-  a {
-    text-decoration: underline;
-  }
-}
+//   a {
+//     text-decoration: underline;
+//   }
+// }
 
-.post .date {
-  text-align: right;
-}
+// .post .date {
+//   text-align: right;
+// }

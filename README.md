@@ -7,7 +7,7 @@ Simple Github Pages blog.
 - Jekyll dependency set-up: `gem install bundler jekyll`
 - Dev.: `jekyll serve`
 
-**Tech. Stack**
+#### Tech. stack
 - [Github Pages](https://pages.github.com/)
 - [Jekyll](https://jekyllrb.com/)
   - [Jekyll-now](https://github.com/barryclark/jekyll-now)

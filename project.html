@@ -9,9 +9,8 @@ permalink: /project/
     {% for project in site.data.projects %}
     <li>
         <a href="{{project.link}}">{{project.name}}</a>
-        <div class="ldesc">
-            {{project.description}}<br>
-            State: {{project.state}}
+        <div class="description">
+            {{project.description}}
         </div>
         <br>
     </li>
