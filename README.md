@@ -1,13 +1,29 @@
 # El15ande.github.io
 
-Simple Github Pages blog.
+My simple [Github Pages](https://pages.github.com/) blog.
 
 ## Configuration
 
-- Jekyll dependency set-up: `gem install bundler jekyll`
-- Dev.: `jekyll serve`
+- Install dependencies: `gem install bundler jekyll`
+- Build site: `jekyll serve`
+- Start localhost preview: `jekyll serve`
 
-#### Tech. stack
-- [Github Pages](https://pages.github.com/)
+#### Blog Structure
+
+- `_data/projects.yml`: Project metadata that will appear in `/projectlist/`.
+- `_layouts/`
+  - `default.html`: The blog scaffold.
+  - `post.html`: The template of all posts.
+- `_posts`: All posts that will appear in `/bloglist/`.
+- `_config.yml`: Blog metatdata.
+- Individual HTMLs
+  - `404.html`: Void.
+  - `bloglist.html`: `/bloglist/` template.
+  - `index.html`: Blog entry.
+  - `project.html`: `/projectlist/` template.
+  - `resume.html`: `/resume/` online résumé.
+
+#### Tech. Stack
+
 - [Jekyll](https://jekyllrb.com/)
   - [Jekyll-now](https://github.com/barryclark/jekyll-now)
