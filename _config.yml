@@ -1,37 +1,12 @@
 name: El15ande
-description:
 avatar: ./images/avatar.jpg
-
-# Flags below are optional
-# Includes an icon in the footer for each username you enter
 footer-links:
   email: 1140076527@qq.com
   github: El15ande
-  linkedin: https://www.linkedin.com/in/yuxuan-wang-984782151
-  twitter:
-  facebook:
-  instagram: 
-  flickr:
-  pinterest:
-  dribbble:
-  rss: # just type anything here for a working RSS icon
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: # channel/<your_long_string> or user/<user-name>
-  googleplus: # anything in your profile username that comes after plus.google.com/
+  linkedin: yuxuan-wang-984782151
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: el15ande.github.io
-# Enter your Disqus shortname (not your username) to enable commenting on posts
-# You can find your shortname on the Settings page of your Disqus account
-disqus:
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+url: https://el15ande.github.io
 
 # You don't need to change any of the configuration flags below
 permalink: /:title/
@@ -53,11 +28,10 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+include:
+  - project.yml
 # Exclude these files from your production _site
 exclude:
   - Gemfile
   - Gemfile.lock
   - readme.md
-
-include:
-  - project.yml

@@ -50,10 +50,6 @@ h1 {
   }
 }
 
-.h1right {
-  text-align: right;
-}
-
 h2 {
   font-size: 24px;
 }
@@ -118,8 +114,9 @@ img {
   max-width: none;
 }
 
-.date {
+.date, .excerpt {
   font-style: italic;
+  text-align: right;
   color: $gray;
 }
 
@@ -291,7 +288,12 @@ footer {
 
 
 
-// El15ande's modifications
+// My modifications
+
+h1.right {
+  text-align: right;
+  font-style: italic;
+}
 
 // Reference @ index.
 #index-reference {
@@ -299,7 +301,7 @@ footer {
   font-size: smaller;
 }
 
-// List description @ bloglist, project.
+// List description @ bloglist, projectlist.
 .description {
   font-size: smaller;
   font-style: oblique;
@@ -310,12 +312,12 @@ footer {
   }
 }
 
-// .post .entry {
-//   // First <p>, TLDR of the blog.
-//   p:first-child {
-//     text-align: right;
-//     color: gray;
-//   }
+.post .entry {
+  // TLDR of the blog.
+  p:first-child {
+    color:peru;
+  }
+}
 
 //   h4 {
 //     text-align: center;
@@ -326,8 +328,4 @@ footer {
 //   a {
 //     text-decoration: underline;
 //   }
-// }
-
-// .post .date {
-//   text-align: right;
 // }

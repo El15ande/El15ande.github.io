@@ -3,30 +3,30 @@ layout: default
 title: HOME
 ---
 <div id="index">
-    <h1 class="h1right">About Me</h1>
+    <h1 class="right">About Me</h1>
         <p>Welcome to my Github Page!</p>
   
         <p>
             My name is <b>Yuxuan Wang (王育瑄)</b>. Feel free to call me <b>Allen</b>, or <a href="https://wowpedia.fandom.com/wiki/Elisande">El15ande</a>.
             <br><br>
             I graduated from <a href="https://www.st-andrews.ac.uk/subjects/computer-science/">University of St Andrews</a> with a Master degree in Computer Science,
-            and I worked in many roles before: <b>Frontend developer</b> (React/Vue, Flutter), <b>Support/Operation engineer</b> in <b>Cloud Networking</b>, and <b><a href="{{ site.baseurl }}/images/PMP2024.pdf">Project Manager</a></b>.
+            and I worked in many roles before: <b>Frontend developer</b> (React/Vue, Flutter), Cloud Networking <b>Support & Operation engineer</b>, and <b><a href="{{ site.baseurl }}/images/PMP2024.pdf">Project Manager</a></b>.
             In part-time, I am also an experienced <b>CompSci tutor</b> for beginner students at any age.
             <br><br>
-            Now, I am a <b>Custom Success Engineer</b> at <a href="https://trtc.io/">Tencent RTC</a>, aiming to become a <i>Cloud Solution Architect</i>, an experienced <i>English Technical Writer</i>, and a <i>Husband</i> in the near future!
+            Now, I am a <b>Custom Success Engineer</b> at <a href="https://trtc.io/">Tencent RTC</a>, aiming to become a <i>Cloud Solution Architect</i>, an experienced <i>Technical Writer</i>, and a <i>Husband</i> in the near future!
         </p>
     <br><hr>
 
-    <h1 class="h1right">Tutoring</h1>
-    <br><hr>
-
-    <h1 class="h1right">Latest Blogs</h1>
-
+    <h1 class="right">Latest Blogs</h1>
         {% for i in (0..2) %}
         <article class="post">
             <p>{{ i|plus:1 }}. <a href="{{site.baseurl}}{{ site.posts[i].url }}">{{ site.posts[i].title }}</a></p>
         </article>
         {% endfor %}
+    <br><hr>
+    
+    <h1 class="right">Tutoring</h1>
+    <br><hr>
   
     <div id="index-reference">
         <p>

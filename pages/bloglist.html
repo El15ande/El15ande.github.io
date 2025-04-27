@@ -1,8 +1,10 @@
 ---
 layout: page
 title: BLOGS
-permalink: /bloglist/
+permalink: /pages/bloglist/
 ---
+
+<h1 class="right">Blogs</h1>
 
 <ul id="bloglist">
     {% for post in site.posts %}
@@ -10,7 +12,8 @@ permalink: /bloglist/
         <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
         <div class="description">
             {{post.excerpt}}
-            {{post.date | date: "%d-%m-%Y"}}
+            <br>
+            {{post.date | date: "%m-%d-%Y"}}
         </div>
         <br>
     </li>
