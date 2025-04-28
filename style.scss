@@ -63,6 +63,11 @@ h4 {
   color: $gray;
 }
 
+h6 {
+  font-size: 16px;
+  color: $gray;
+}
+
 p {
   margin: 15px 0;
 }
@@ -107,6 +112,19 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 0.5px solid;
+  padding: 2.5px 5px
+}
+
+th {
+  font-weight: bold;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -251,11 +269,12 @@ nav {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
+    // margin: 1.8em .8em;
     border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    // padding: 0.1em 1em;
+    padding: 0em 1em;
     color: $gray;
-    font-size: 22px;
+    font-size: 14px;
     font-style: italic;
   }
 
@@ -290,9 +309,16 @@ footer {
 
 // My modifications
 
-h1.right {
+h1.right, h2, h4 {
   text-align: right;
+}
+
+h1.right {
   font-style: italic;
+}
+
+h4 {
+  color: green;
 }
 
 // Reference @ index.
@@ -317,15 +343,8 @@ h1.right {
   p:first-child {
     color:peru;
   }
+
+  blockquote p:first-child {
+    color: $gray;
+  }
 }
-
-//   h4 {
-//     text-align: center;
-//     font-size: larger;
-//     color: black;
-//   }
-
-//   a {
-//     text-decoration: underline;
-//   }
-// }
