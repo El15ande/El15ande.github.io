@@ -2,7 +2,7 @@
 
 My simple [Github Pages](https://pages.github.com/) blog.
 
-## Configuration
+## Project Setup
 
 - Install dependencies: `gem install bundler jekyll`
 - Build site: `jekyll serve`

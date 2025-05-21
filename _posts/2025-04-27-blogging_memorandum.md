@@ -18,7 +18,7 @@ This "style guide" is my guidelines aiming at writing [3C](#3c-subjective) artic
 By default, all contents will be served in equal English and Chinese, but depending on their core concepts, some sub-sections may have additional English or Chinese explanations.<br>
 本文所有内容默认提供中英对等译文，但一些子章节根据其核心概念可能会提供额外的单语解释。
 
-**All contents will be marked with either my subjective opinions or served with their reference origins, any feedback or suggestions are welcome!<br>所有内容都会标出是个人主观意见或是来源注释, 欢迎您提供意见与建议！**
+**All contents will be marked with either my "subjective" opinions or served with their "reference" origins, any feedback or suggestions are welcome!<br>所有内容都会标出是个人主观意见或是来源注释, 欢迎您提供意见与建议！**
 
 ## PROGRESS | 施工进度
 
@@ -69,30 +69,23 @@ Here are some editorial style guide resources that help me to build this style g
 
 #### Compound words ([Ref.](https://english.stackexchange.com/questions/889/when-should-compound-words-be-written-as-one-word-with-hyphens-or-with-spac))
 
-Compound words can be categorised into three forms:
-- Closed form: words are melded together (e.g. keyboard, breakfast).
-- Hyphenated form: words are concatenated through hyphens (e.g. father-in-law, old-fashioned).
-- Open form: words are separated (e.g. post office).
-
+Compound words can be categorised into three forms:<br>
 复合词是由两个或以上的[单词\|词干]组成的新单词, 有以下三种连接方式：
-- 闭合型：单词直接粘接在一起 (e.g. keyboard, breakfast)。
-- 连字符型： 单词由连字符组合在一起 (e.g. father-in-law, old-fashioned)。
-- 开放型： 单词组合成短语 (e.g. post office)。
+- Closed form \| 闭合型: words are melded together (e.g. keyboard, breakfast).
+- Hyphenated form \| 连字符型: words are concatenated through hyphens (e.g. father-in-law, old-fashioned).
+- Open form \| 开放型: words are separated (e.g. post office).
 
-When forming a compound word, use **closed words (preferred) or hypenated words** as **[attributives]()**, use **open words** as **[predicatives]()**. For example:<br>
+When forming a compound word, use **closed words (preferred) or hyphenated words** as **[attributives]()**, use **open words** as **[predicatives]()**. For example:<br>
 当需要自定义组合复合词时，如果该词作**[定语]()**，则推荐使用**闭合型 (优先)或连字符型**，如果该词作**[表语]()**，则使用**开放型**。如下例：
-> [Fullstack\|Full-stack] development.<br>
-> Full stack programming.
+> Attributive: [Fullstack\|Full-stack] development/developer<br>
+> Predicative: Full stack programming/engineering
 
 #### Plural indicators *(s) (es)* ([Ref.](https://learn.microsoft.com/en-us/style-guide/a-z-word-list-term-collections/s/s-es))
 
-**Do not use (s), (es)** to a singular noun to indicate that it can be singular or plural.
-- **Use plurals directly**.
+**Do not use (s), (es)** to a singular noun to indicate that it can be singular or plural.<br>
+当需要表达某个名词可单数可复数时，**不要使用(s)/(es)**：
+- **Use plurals directly** \| 直接使用该名词的复数形式.
 - To indicate something can be both singular and plural, use **one or more** or **multiple**.
-
-当需要表达某个名词可单数可复数时，**不要使用(s)/(es)**。
-- **直接使用该名词的复数形式**，或者直接写出该名词所需的数量。
-- 当需要表达该名词可单可复时，使用**one or more \| 一个或以上**或**multiple**。
 
 #### [a|b|c] (Very subjective)
 
